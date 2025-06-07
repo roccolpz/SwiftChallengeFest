@@ -1,0 +1,21 @@
+{
+  "Inputs" : {
+    "image" : {
+      "MLFeatureShortDescription" : "Image of a food"
+    }
+  },
+  "Outputs" : {
+    "foodConfidence" : {
+      "MLFeatureShortDescription" : "Confidence and label of predicted food"
+    },
+    "classLabel" : {
+      "MLFeatureShortDescription" : "Label of predicted food"
+    }
+  },
+  "TrainingInputs" : {
+
+  },
+  "States" : {
+
+  }
+}

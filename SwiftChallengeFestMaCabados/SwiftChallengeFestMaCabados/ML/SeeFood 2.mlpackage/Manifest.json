@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "800B32C9-F3ED-42E1-BB2C-1A5CA2F68D64": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "AC43C0E7-C9DD-4422-B160-3BD835FA26A0": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "SeeFood 2.mlmodel",
+            "path": "com.apple.CoreML/SeeFood 2.mlmodel"
+        },
+        "C4A6FF50-2751-42EE-B635-6F5E258CF27B": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        }
+    },
+    "rootModelIdentifier": "AC43C0E7-C9DD-4422-B160-3BD835FA26A0"
+}
