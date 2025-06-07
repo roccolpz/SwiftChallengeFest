@@ -103,7 +103,7 @@ class GlucosaManager: ObservableObject {
     
     /// Registra una predicción de comida
     func registrarPrediccionComida(_ prediccion: PrediccionGlucosa) {
-        let registroComida = RegistroComida(
+        _ = RegistroComida(
             fecha: Date(),
             glucosaPrevia: glucosaActual,
             prediccion: prediccion,
@@ -231,59 +231,12 @@ class GlucosaManager: ObservableObject {
     }
 }
 
-// MARK: - Supporting Models
-
 struct MedicionGlucosa: Identifiable, Codable {
     let id = UUID()
     let valor: Double
     let fecha: Date
     let fuente: FuenteMedicion
 }
-
-enum FuenteMedicion: String, Codable {
-    case manual = "Manual"
-    case automatica = "Monitor Continuo"
-    case estimada = "Estimada"
-}
-
-enum EstadoGlucosa: String, CaseIterable {
-    case hipoSevera = "Hipoglucemia Severa"
-    case hipoLeve = "Hipoglucemia Leve"
-    case normal = "Normal"
-    case hiperLeve = "Hiperglucemia Leve"
-    case hiperModerada = "Hiperglucemia Moderada"
-    case hiperSevera = "Hiperglucemia Severa"
-    
-    static func desde(_ glucosa: Double) -> EstadoGlucosa {
-        switch glucosa {
-        case ..<70: return .hipoSevera
-        case 70..<80: return .hipoLeve
-        case 80..<140: return .normal
-        case 140..<180: return .hiperLeve
-        case 180..<250: return .hiperModerada
-        default: return .hiperSevera
-        }
-    }
-    
-    var color: Color {
-        switch self {
-        case .hipoSevera, .hiperSevera: return ColorHelper.Estados.error
-        case .hipoLeve, .hiperModerada: return ColorHelper.Estados.advertencia
-        case .hiperLeve: return .yellow
-        case .normal: return ColorHelper.Estados.exito
-        }
-    }
-    
-    var emoji: String {
-        switch self {
-        case .hipoSevera, .hiperSevera: return "🚨"
-        case .hipoLeve, .hiperModerada: return "⚠️"
-        case .hiperLeve: return "⚠️"
-        case .normal: return "✅"
-        }
-    }
-}
-
 
 
 struct EstadisticasGlucosa {
@@ -303,24 +256,3 @@ struct RegistroComida: Identifiable {
     let alimentos: [AlimentoConPorcion]
 }
 
-enum TendenciaGlucosa: String, CaseIterable {
-    case subiendo = "Subiendo"
-    case bajando = "Bajando"
-    case estable = "Estable"
-    
-    var emoji: String {
-        switch self {
-        case .subiendo: return "📈"
-        case .bajando: return "📉"
-        case .estable: return "➡️"
-        }
-    }
-    
-    var color: Color {
-        switch self {
-        case .subiendo: return .red
-        case .bajando: return .orange
-        case .estable: return .green
-        }
-    }
-}
