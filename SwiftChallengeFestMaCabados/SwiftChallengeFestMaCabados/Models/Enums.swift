@@ -90,3 +90,18 @@ enum RecomendacionOrden: String, CaseIterable {
         }
     }
 }
+
+enum NivelComplejidad: String {
+    case simple = "Simple"
+    case moderada = "Moderada"
+    case compleja = "Compleja"
+    
+    var emoji: String {
+        switch self {
+        case .simple: return "🟢"
+        case .moderada: return "🟡"
+        case .compleja: return "🔴"
+        }
+    }
+}
+
