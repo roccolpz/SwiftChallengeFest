@@ -1,6 +1,0 @@
-{
-  "MLModelVersionStringKey" : "--",
-  "MLModelDescriptionKey" : "This MLModel allows you to take a photo of a food item and identify it. Over 150 food items are currently supported.",
-  "MLModelAuthorKey" : "Chaitanya Ramji",
-  "MLModelLicenseKey" : "MIT"
-}
