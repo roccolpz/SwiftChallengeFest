@@ -53,3 +53,40 @@ enum OrdenComida: CaseIterable {
         }
     }
 }
+enum RiesgoGlucosa: String, CaseIterable {
+    case hipoglucemiaSevera = "🚨 Hipoglucemia Severa"
+    case hipoglucemiaLeve = "⚠️ Hipoglucemia Leve"
+    case normal = "✅ Normal"
+    case hiperglucemiaLeve = "⚠️ Hiperglucemia Leve"
+    case hiperglucemiaModerada = "🚨 Hiperglucemia Moderada"
+    case hiperglucemiaSevera = "🆘 Hiperglucemia Severa"
+    
+    var color: String {
+        switch self {
+        case .hipoglucemiaSevera, .hiperglucemiaSevera: return "red"
+        case .hipoglucemiaLeve, .hiperglucemiaModerada: return "orange"
+        case .hiperglucemiaLeve: return "yellow"
+        case .normal: return "green"
+        }
+    }
+}
+
+enum RecomendacionOrden: String, CaseIterable {
+    case carbohidratosAltos = "🍚 Alta carga de carbohidratos: verduras primero es crucial"
+    case pocaFibra = "🥬 Poca fibra: añade verduras y cómelas primero"
+    case altaFibra = "✅ Buena fibra: cualquier orden con verduras primero funcionará bien"
+    case altasProteinas = "🍗 Altas proteínas: proteínas primero también es efectivo"
+    case pocasProteinas = "⚠️ Pocas proteínas: considera añadir más para mejor control"
+    case ordenGeneral = "💡 Regla de oro: verduras → proteínas → carbohidratos"
+    
+    var icono: String {
+        switch self {
+        case .carbohidratosAltos: return "🍚"
+        case .pocaFibra: return "🥬"
+        case .altaFibra: return "✅"
+        case .altasProteinas: return "🍗"
+        case .pocasProteinas: return "⚠️"
+        case .ordenGeneral: return "💡"
+        }
+    }
+}
