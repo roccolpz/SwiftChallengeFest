@@ -5,6 +5,7 @@
 //  Created by Isaac Rojas on 07/06/25.
 //
 import Foundation
+import SwiftUI
 
 enum CategoriaAlimento: String, CaseIterable, Codable {
     case verduras = "Verduras"
@@ -51,6 +52,15 @@ enum OrdenComida: CaseIterable {
         case .carbohidratosPrimero: return "🍚➡️🥬➡️🍗 Carbohidratos primero"
         case .simultaneo: return "🍽️ Todo junto"
         }
+    }
+    
+    var color: Color {
+            switch self {
+            case .verdurasPrimero:     return ColorHelper.Glucosa.normal
+            case .proteinasPrimero:    return ColorHelper.Estados.info
+            case .carbohidratosPrimero:return ColorHelper.Estados.error
+            case .simultaneo:          return ColorHelper.Estados.neutro
+            }
     }
 }
 enum RiesgoGlucosa: String, CaseIterable {
@@ -105,3 +115,22 @@ enum NivelComplejidad: String {
     }
 }
 
+enum GradientDirection {
+    case vertical
+    case horizontal
+    case diagonal
+    case radial
+    
+    var puntos: (UnitPoint, UnitPoint) {
+        switch self {
+        case .vertical:
+            return (.top, .bottom)
+        case .horizontal:
+            return (.leading, .trailing)
+        case .diagonal:
+            return (.topLeading, .bottomTrailing)
+        case .radial:
+            return (.center, .bottom)
+        }
+    }
+}

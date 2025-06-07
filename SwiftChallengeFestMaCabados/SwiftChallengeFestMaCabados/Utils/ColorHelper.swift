@@ -159,22 +159,6 @@ struct ColorHelper {
         )
     }
     
-    // MARK: - Colores para Orden de Comida
-    struct OrdenComida {
-        static let verdurasPrimero = Glucosa.normal       // Verde (mejor)
-        static let proteinasPrimero = Estados.info        // Azul (bueno)
-        static let carbohidratosPrimero = Estados.error   // Rojo (malo)
-        static let simultaneo = Estados.neutro            // Gris (neutro)
-        
-        static func colorPorOrden(_ orden: OrdenComida) -> Color {
-            switch orden {
-            case .verdurasPrimero: return verdurasPrimero
-            case .proteinasPrimero: return proteinasPrimero
-            case .carbohidratosPrimero: return carbohidratosPrimero
-            case .simultaneo: return simultaneo
-            }
-        }
-    }
     
     // MARK: - Colores Adaptativos (Modo Oscuro)
     struct Adaptativo {
@@ -227,23 +211,3 @@ struct ColorHelper {
     }
 }
 
-// MARK: - Enum Helper para Direcciones de Gradiente
-enum GradientDirection {
-    case vertical
-    case horizontal
-    case diagonal
-    case radial
-    
-    var puntos: (UnitPoint, UnitPoint) {
-        switch self {
-        case .vertical:
-            return (.top, .bottom)
-        case .horizontal:
-            return (.leading, .trailing)
-        case .diagonal:
-            return (.topLeading, .bottomTrailing)
-        case .radial:
-            return (.center, .bottom)
-        }
-    }
-}
