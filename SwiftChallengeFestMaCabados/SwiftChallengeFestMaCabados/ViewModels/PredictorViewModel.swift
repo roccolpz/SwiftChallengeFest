@@ -188,7 +188,7 @@ class PredictorViewModel: ObservableObject {
     /// Aplica sugerencias automáticas según perfil
     func aplicarSugerenciasAutomaticas() {
         let macros = macronutrientesTotales
-        let sugerencias = AlgoritmoOrdenComida.generarRecomendaciones(macros)
+        _ = AlgoritmoOrdenComida.generarRecomendaciones(macros)
         
         // Aplicar la mejor recomendación automáticamente
         let analisis = AlgoritmoOrdenComida.analizarComposicionComida(macros)
@@ -255,29 +255,21 @@ class PredictorViewModel: ObservableObject {
         let glucosaActual = glucosaManager.glucosaActual
         let perfil = perfilManager.perfil
         
-        do {
-            let prediccion = predictor.predecirGlucosa(
-                alimentos: alimentosSeleccionados,
-                usuario: perfil,
-                glucosaActual: glucosaActual,
-                horaComida: horaComidaSeleccionada,
-                ordenComida: ordenComidaSeleccionado
-            )
-            
-            DispatchQueue.main.async { [weak self] in
-                self?.prediccionActual = prediccion
-                self?.isLoading = false
-                self?.errorMessage = nil
-            }
-            
-            print("📊 Predicción generada: pico \(prediccion.picoMaximo.glucosa.glucosaFormat)")
-            
-        } catch {
-            DispatchQueue.main.async { [weak self] in
-                self?.errorMessage = "Error generando predicción: \(error.localizedDescription)"
-                self?.isLoading = false
-            }
+        let prediccion = predictor.predecirGlucosa(
+            alimentos: alimentosSeleccionados,
+            usuario: perfil,
+            glucosaActual: glucosaActual,
+            horaComida: horaComidaSeleccionada,
+            ordenComida: ordenComidaSeleccionado
+        )
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.prediccionActual = prediccion
+            self?.isLoading = false
+            self?.errorMessage = nil
         }
+        
+        print("📊 Predicción generada: pico \(prediccion.picoMaximo.glucosa.glucosaFormat)")
     }
     
     private func ejecutarComparacion() {
