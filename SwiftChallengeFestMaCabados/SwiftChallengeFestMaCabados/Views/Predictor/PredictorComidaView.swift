@@ -32,12 +32,16 @@ struct PredictorComidaView: View {
                         .tag(PredictorTab.seleccionar)
                     
                     // Tab 2: Alimentos Seleccionados
-                    AlimentosSeleccionadosView(viewModel: viewModel)
-                        .tag(PredictorTab.seleccionados)
+                    ScrollView {
+                        AlimentosSeleccionadosView(viewModel: viewModel)
+                    }
+                    .tag(PredictorTab.seleccionados)
                     
                     // Tab 3: Predicción
-                    prediccionView
-                        .tag(PredictorTab.prediccion)
+                    ScrollView {
+                        prediccionView
+                    }
+                    .tag(PredictorTab.prediccion)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
