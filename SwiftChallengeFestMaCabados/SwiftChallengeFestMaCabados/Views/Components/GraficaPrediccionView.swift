@@ -235,12 +235,14 @@ struct GraficaPrediccionView: View {
             // Solo mostrar algunos puntos para no saturar
             if index % 2 == 0 || punto.id == prediccion.picoMaximo.id {
                 Circle()
-                    .fill(ColorHelper.Glucosa.colorPorValor(punto.glucosa))
+//                    .fill(ColorHelper.Glucosa.colorPorValor(punto.glucosa))
+                    .fill(.background)
                     .frame(width: selectedPoint?.id == punto.id ? 12 : 8,
                            height: selectedPoint?.id == punto.id ? 12 : 8)
                     .overlay(
                         Circle()
-                            .stroke(Color.white, lineWidth: 2)
+//                            .stroke(Color.white, lineWidth: 2)
+                            .stroke(Color.primary, lineWidth: 2)
                     )
                     .position(x: x, y: y)
                     .onTapGesture {
@@ -265,7 +267,7 @@ struct GraficaPrediccionView: View {
                 path.addLine(to: CGPoint(x: picoX, y: geometry.size.height))
             }
             .stroke(
-                ColorHelper.Glucosa.colorPorValor(prediccion.picoMaximo.glucosa).opacity(0.5),
+                Color.green,
                 style: StrokeStyle(lineWidth: 1, dash: [2, 2])
             )
             

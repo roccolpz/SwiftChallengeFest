@@ -93,20 +93,19 @@ struct PredictorComidaView: View {
                         // Icono
                         Image(systemName: tab.icon)
                             .font(.title3)
-                            .foregroundColor(currentTab == tab ? ColorHelper.Principal.primario : .secondary)
+                            .foregroundColor(currentTab == tab ? .accentColor : .secondary)
                         
                         // Título
                         Text(tab.title)
                             .font(.caption)
                             .fontWeight(currentTab == tab ? .semibold : .regular)
-                            .foregroundColor(currentTab == tab ? ColorHelper.Principal.primario : .secondary)
+                            .foregroundColor(currentTab == tab ? .accentColor : .secondary)
                         
                         // Badge para alimentos seleccionados
                         if tab == .seleccionados && viewModel.alimentosSeleccionados.count > 0 {
                             Text("\(viewModel.alimentosSeleccionados.count)")
                                 .font(.caption2)
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
                                 .frame(width: 18, height: 18)
                                 .background(ColorHelper.Principal.primario)
                                 .clipShape(Circle())
@@ -245,7 +244,7 @@ struct PredictorComidaView: View {
                             Text(viewModel.isLoading ? "Calculando..." : "Predecir")
                                 .fontWeight(.semibold)
                         }
-                        .foregroundColor(.white)
+                        
                         .padding(.horizontal, 20)
                         .padding(.vertical, 12)
                         .background(
@@ -276,7 +275,7 @@ struct PredictorComidaView: View {
                         .foregroundColor(.secondary)
                 }
                 .font(.headline)
-                .foregroundColor(ColorHelper.Principal.primario)
+                .foregroundColor(.accentColor)
                 .padding()
                 .background(
                     RoundedRectangle(cornerRadius: 12)

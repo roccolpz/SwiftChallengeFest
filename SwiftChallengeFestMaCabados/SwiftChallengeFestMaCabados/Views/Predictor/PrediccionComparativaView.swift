@@ -30,11 +30,11 @@ struct PrediccionComparativaView: View {
                             .background(Color(.systemGroupedBackground))
                         
                         // Gráfica comparativa
-                        graficaComparativa
-                            .padding()
-                            .background(Color(.systemGroupedBackground))
-                        
-                        // Lista de resultados
+//                        graficaComparativa
+//                            .padding()
+//                            .background(Color(.systemGroupedBackground))
+//                        
+//                        // Lista de resultados
                         listaResultados
                     }
                 }
@@ -55,15 +55,15 @@ struct PrediccionComparativaView: View {
         .onAppear {
             generarComparacion()
         }
-        .sheet(isPresented: $showingDetallesOrden) {
-            if let orden = selectedOrden {
-                DetalleOrdenSheet(
-                    orden: orden,
-                    prediccionComparativa: viewModel.prediccionComparativa,
-                    glucosaInicial: glucosaManager.glucosaActual
-                )
-            }
-        }
+//        .sheet(isPresented: $showingDetallesOrden) {
+//            if let orden = selectedOrden {
+//                DetalleOrdenSheet(
+//                    orden: orden,
+//                    prediccionComparativa: viewModel.prediccionComparativa,
+//                    glucosaInicial: glucosaManager.glucosaActual
+//                )
+//            }
+//        }
     }
     
     // MARK: - Loading View
@@ -477,11 +477,7 @@ struct DetalleOrdenSheet: View {
                                 .font(.headline)
                                 .padding(.horizontal)
                             
-                            GraficaPrediccionView(
-                                prediccion: prediccion.prediccion,
-                                glucosaInicial: glucosaInicial
-                            )
-                            .padding(.horizontal)
+                            
                         }
                         
                         // Estadísticas detalladas

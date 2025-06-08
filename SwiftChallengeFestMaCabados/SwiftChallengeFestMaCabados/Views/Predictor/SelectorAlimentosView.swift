@@ -267,7 +267,6 @@ struct AlimentoRow: View {
                     } placeholder: {
                         Image(systemName: iconoPorCategoria(alimento.categoria))
                             .font(.title3)
-                            .foregroundColor(ColorHelper.Categorias.colorPorCategoria(alimento.categoria))
                     }
                     .frame(width: 24, height: 24)
                     .clipShape(Circle())
@@ -275,7 +274,6 @@ struct AlimentoRow: View {
                 
                 Text(alimento.categoria.displayName)
                     .font(.caption2)
-                    .foregroundColor(.secondary)
                     .lineLimit(1)
             }
             
@@ -347,7 +345,7 @@ struct AlimentoRow: View {
                 Button(action: onTap) {
                     Image(systemName: isSelected ? "checkmark" : "plus")
                         .font(.title3)
-                        .foregroundColor(.white)
+                        .foregroundColor(isSelected ? .white : .primary)
                         .frame(width: 32, height: 32)
                         .background(
                             Circle()

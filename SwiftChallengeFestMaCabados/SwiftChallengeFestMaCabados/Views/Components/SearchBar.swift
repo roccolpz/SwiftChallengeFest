@@ -116,7 +116,7 @@ struct SearchBarWithFilters: View {
                 }) {
                     Image(systemName: showingFilters ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
                         .font(.title3)
-                        .foregroundColor(selectedCategory != nil ? ColorHelper.Principal.primario : .secondary)
+                        
                 }
             }
             
@@ -154,7 +154,7 @@ struct SearchBarWithFilters: View {
                     CategoryFilterChip(
                         title: categoria.rawValue,
                         isSelected: selectedCategory == categoria,
-                        color: ColorHelper.Categorias.colorPorCategoria(categoria)
+                        color: .gray
                     ) {
                         selectedCategory = selectedCategory == categoria ? nil : categoria
                     }
