@@ -45,3 +45,29 @@ struct PerfilUsuario: Codable {
         return 1800 / insulina
     }
 }
+
+func guardarPerfil(_ perfil: PerfilUsuario) {
+    do {
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(perfil)
+        UserDefaults.standard.set(data, forKey: "perfilUsuario")
+        print("✅ Perfil guardado exitosamente")
+    } catch {
+        print("❌ Error al guardar perfil: \(error)")
+    }
+}
+
+func cargarPerfil() -> PerfilUsuario? {
+    if let data = UserDefaults.standard.data(forKey: "perfilUsuario") {
+        do {
+            let decoder = JSONDecoder()
+            let perfil = try decoder.decode(PerfilUsuario.self, from: data)
+            print("✅ Perfil cargado exitosamente")
+            return perfil
+        } catch {
+            print("❌ Error al cargar perfil: \(error)")
+        }
+    }
+    return nil
+}
+

@@ -2,12 +2,20 @@ import SwiftUI
 import CoreML
 
 struct ContentView: View {
+    @State private var perfilUsuario: PerfilUsuario? = cargarPerfil()
+    
     var body: some View {
-        DashboardView()
+        if perfilUsuario != nil {
+            DashboardView()
+//                .onAppear {
+//                    UserDefaults.standard.removeObject(forKey: "perfilUsuario")
+//                }
+        } else {
+            UserFormView()
+        }
     }
 }
 
 #Preview {
     ContentView()
-        .previewDevice("iPhone 15")
 }
