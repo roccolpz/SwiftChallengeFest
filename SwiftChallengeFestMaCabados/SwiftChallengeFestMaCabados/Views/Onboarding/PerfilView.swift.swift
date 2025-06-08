@@ -7,9 +7,10 @@
 import SwiftUI
 
 struct PerfilView: View {
-    @StateObject private var perfilManager = PerfilUsuarioManager.shared
     @StateObject private var glucosaManager = GlucosaManager.shared
     @Environment(\.presentationMode) var presentationMode
+    
+    @State private var perfil = PerfilUsuario()
     
     @State private var showingEditPerfil = false
     @State private var showingResetAlert = false
@@ -27,7 +28,7 @@ struct PerfilView: View {
                     informacionPersonalCard
                     
                     // Información médica (si es diabético)
-                    if perfilManager.perfil.esDiabetico {
+                    if perfil.esDiabetico {
                         informacionMedicaCard
                     }
                     
@@ -66,10 +67,7 @@ struct PerfilView: View {
         }
         .alert("Resetear Perfil", isPresented: $showingResetAlert) {
             Button("Cancelar", role: .cancel) { }
-            Button("Resetear", role: .destructive) {
-                perfilManager.resetearPerfil()
-                presentationMode.wrappedValue.dismiss()
-            }
+            
         } message: {
             Text("¿Estás seguro de que quieres resetear tu perfil? Esta acción no se puede deshacer.")
         }
@@ -78,41 +76,36 @@ struct PerfilView: View {
     // MARK: - Perfil Header
     private var perfilHeader: some View {
         VStack(spacing: 16) {
-            // Avatar
-            ZStack {
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [ColorHelper.Principal.primario, ColorHelper.Principal.secundario],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .frame(width: 100, height: 100)
-                
-                Text(perfilManager.perfil.nombre.prefix(1).uppercased())
-                    .font(.system(size: 40, weight: .bold))
-                    .foregroundColor(.white)
-            }
             
             // Nombre y edad
             VStack(spacing: 4) {
-                Text(perfilManager.perfil.nombre.isEmpty ? "Usuario" : perfilManager.perfil.nombre)
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:150, height:150)
+                
+                Text(perfil.nombre.isEmpty ? "Usuario" : perfil.nombre)
                     .font(.title)
                     .fontWeight(.bold)
                 
-                Text("\(perfilManager.perfil.edad) años • \(perfilManager.perfil.genero.rawValue)")
+                Text("\(perfil.edad) años • \(perfil.genero.rawValue)")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
+            .onAppear {
+                let perfilUsuario : PerfilUsuario? = cargarPerfil()
+                if perfilUsuario != nil {
+                    perfil = perfilUsuario.unsafelyUnwrapped
+                }
+            }
             
             // Badge de diabetes
-            if perfilManager.perfil.esDiabetico {
+            if perfil.esDiabetico {
                 HStack(spacing: 8) {
                     Image(systemName: "cross.fill")
                         .font(.caption)
                     
-                    Text(perfilManager.perfil.tipoDiabetes?.rawValue ?? "Diabetes")
+                    Text(perfil.tipoDiabetes?.rawValue ?? "Diabetes")
                         .font(.caption)
                         .fontWeight(.medium)
                 }
@@ -133,12 +126,13 @@ struct PerfilView: View {
             CardHeader(title: "Información Personal", icon: "person.circle")
             
             VStack(spacing: 12) {
-                InfoRow(label: "Peso", value: "\(perfilManager.perfil.peso) kg")
-                InfoRow(label: "Altura", value: "\(perfilManager.perfil.altura) cm")
-                InfoRow(label: "IMC", value: "\(perfilManager.perfil.imc) (\(perfilManager.categoriaIMC.categoria))")
+                InfoRow(label: "Peso", value: "\(perfil.peso) kg")
+                InfoRow(label: "Altura", value: "\(perfil.altura) cm")
+                InfoRow(label: "IMC", value: "\(perfil.imc)")
             }
         }
         .cardStyle()
+        
     }
     
     // MARK: - Información Médica Card
@@ -147,39 +141,33 @@ struct PerfilView: View {
             CardHeader(title: "Información Médica", icon: "cross.case")
             
             VStack(spacing: 12) {
-                InfoRow(label: "Tipo de Diabetes", value: perfilManager.perfil.tipoDiabetes?.rawValue ?? "No especificado")
+                InfoRow(label: "Tipo de Diabetes", value: perfil.tipoDiabetes?.rawValue ?? "No especificado")
                 
-                if let glucosaObjetivo = perfilManager.perfil.glucosaObjetivo {
+                if let glucosaObjetivo = perfil.glucosaObjetivo {
                     InfoRow(label: "Glucosa Objetivo", value: glucosaObjetivo.glucosaFormat)
                 }
                 
-                if let insulina = perfilManager.perfil.insulinaBasalDiaria {
+                if let insulina = perfil.insulinaBasalDiaria {
                     InfoRow(label: "Insulina Basal Diaria", value: insulina.insulinaFormat)
                     
-                    let ratios = perfilManager.ratiosCalculados
-                    if let ic = ratios.ic {
-                        InfoRow(label: "Ratio I:C", value: "1:\(ic)g")
-                    }
-                    if let sensibilidad = ratios.sensibilidad {
-                        InfoRow(label: "Factor Sensibilidad", value: "\(sensibilidad) mg/dL/U")
-                    }
+                    
                 }
                 
                 // Dispositivos
-                if perfilManager.perfil.usaBombaInsulina || perfilManager.perfil.usaMonitorContinuo {
+                if perfil.usaBombaInsulina || perfil.usaMonitorContinuo {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Dispositivos:")
                             .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.secondary)
                         
-                        if perfilManager.perfil.usaBombaInsulina {
+                        if perfil.usaBombaInsulina {
                             Text("• Bomba de Insulina")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
                         
-                        if perfilManager.perfil.usaMonitorContinuo {
+                        if perfil.usaMonitorContinuo {
                             Text("• Monitor Continuo de Glucosa")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
@@ -188,14 +176,14 @@ struct PerfilView: View {
                 }
                 
                 // Medicamentos
-                if !perfilManager.perfil.medicamentos.isEmpty {
+                if !perfil.medicamentos.isEmpty {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Medicamentos:")
                             .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.secondary)
                         
-                        ForEach(perfilManager.perfil.medicamentos, id: \.self) { medicamento in
+                        ForEach(perfil.medicamentos, id: \.self) { medicamento in
                             Text("• \(medicamento)")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
@@ -246,37 +234,37 @@ struct PerfilView: View {
                         .fontWeight(.medium)
                     
                     HStack {
-                        HorarioMiniCard(tipo: "🌅 Desayuno", hora: perfilManager.perfil.horarioDesayuno.horaFormat)
+                        HorarioMiniCard(tipo: "🌅 Desayuno", hora: perfil.horarioDesayuno.horaFormat)
                         Spacer()
-                        HorarioMiniCard(tipo: "☀️ Comida", hora: perfilManager.perfil.horarioComida.horaFormat)
+                        HorarioMiniCard(tipo: "☀️ Comida", hora: perfil.horarioComida.horaFormat)
                         Spacer()
-                        HorarioMiniCard(tipo: "🌙 Cena", hora: perfilManager.perfil.horarioCena.horaFormat)
+                        HorarioMiniCard(tipo: "🌙 Cena", hora: perfil.horarioCena.horaFormat)
                     }
                 }
                 
                 // Restricciones dietéticas
-                if !perfilManager.perfil.restriccionesDieteticas.isEmpty {
+                if !perfil.restriccionesDieteticas.isEmpty {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Restricciones Dietéticas:")
                             .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.secondary)
                         
-                        Text(perfilManager.perfil.restriccionesDieteticas.map { $0.rawValue }.joined(separator: ", "))
+                        Text(perfil.restriccionesDieteticas.map { $0.rawValue }.joined(separator: ", "))
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
                 }
                 
                 // Alergias
-                if !perfilManager.perfil.alergias.isEmpty {
+                if !perfil.alergias.isEmpty {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Alergias:")
                             .font(.caption)
                             .fontWeight(.medium)
                             .foregroundColor(.red)
                         
-                        Text(perfilManager.perfil.alergias.joined(separator: ", "))
+                        Text(perfil.alergias.joined(separator: ", "))
                             .font(.caption)
                             .foregroundColor(.red)
                     }
@@ -290,30 +278,9 @@ struct PerfilView: View {
     private var accionesCard: some View {
         VStack(spacing: 12) {
             // Exportar reporte
-            Button(action: {
-                reporteGenerado = perfilManager.generarReportePerfil()
-                showingExportSheet = true
-            }) {
-                ActionButton(
-                    icon: "square.and.arrow.up",
-                    title: "Exportar Reporte",
-                    subtitle: "Comparte tu información médica",
-                    color: .blue
-                )
-            }
             
-            // Reconfigurar
-            Button(action: {
-                perfilManager.requiereOnboarding = true
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                ActionButton(
-                    icon: "arrow.clockwise",
-                    title: "Reconfigurar Perfil",
-                    subtitle: "Volver a hacer el setup inicial",
-                    color: .orange
-                )
-            }
+            
+            
             
             // Reset (peligroso)
             Button(action: {

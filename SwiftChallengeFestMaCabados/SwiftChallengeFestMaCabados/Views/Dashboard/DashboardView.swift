@@ -20,6 +20,9 @@ struct DashboardView: View {
                     // Header personalizado
                     headerPersonalizado
                     
+                    // Acciones rápidas
+                    accionesRapidas
+                    
                     // Card principal de glucosa
                     GlucosaActualCard(glucosaManager: glucosaManager)
                     
@@ -31,8 +34,7 @@ struct DashboardView: View {
                     
                     HistorialComidasCard()
                     
-                    // Acciones rápidas
-                    accionesRapidas
+                    
                     
                     // Resumen del día
                     resumenDelDia
@@ -55,7 +57,7 @@ struct DashboardView: View {
         }
         .sheet(isPresented: $showingPerfil) {
             // TODO: Vista de perfil
-            Text("Perfil - Próximamente")
+            PerfilView()
         }
         .sheet(isPresented: $showingNoticias) {
             DiabetesNewsView()
@@ -127,7 +129,7 @@ struct DashboardView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("¿Qué vas a comer?")
+                    Text("Registra tu Comida")
                         .font(.headline)
                         .foregroundColor(.primary)
                     
@@ -164,16 +166,16 @@ struct DashboardView: View {
                 AccionRapidaCard(
                     titulo: "Simular",
                     subtitulo: "Medición",
-                    icono: "arrow.clockwise",
+                    icono: "chart.bar.fill",
                     color: .blue
                 ) {
                     glucosaManager.simularMedicionAutomatica()
                 }
                 
                 AccionRapidaCard(
-                    titulo: "Estadísticas",
-                    subtitulo: "Del día",
-                    icono: "chart.bar.fill",
+                    titulo: "Meal Planner",
+                    subtitulo: "Recomendación del chef",
+                    icono: "frying.pan",
                     color: .green
                 ) {
                     print("📊 Estadísticas del día")
@@ -193,7 +195,7 @@ struct DashboardView: View {
                 AccionRapidaCard(
                     titulo: "Configurar",
                     subtitulo: "Perfil",
-                    icono: "gearshape.fill",
+                    icono: "person.fill",
                     color: .gray
                 ) {
                     showingPerfil = true
