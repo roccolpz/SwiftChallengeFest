@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct HistorialComidasCard: View {
-    @State private var comidasRecientes: [ComidaHistorial] = []
+    @StateObject private var viewModel = HistorialComidasViewModel.shared
     @State private var showingDetalleHistorial = false
     @State private var comidaSeleccionada: ComidaHistorial?
     
@@ -34,7 +34,7 @@ struct HistorialComidasCard: View {
             }
             
             // Contenido
-            if comidasRecientes.isEmpty {
+            if viewModel.comidasRecientes.isEmpty {
                 estadoVacio
             } else {
                 listaComidas
@@ -46,14 +46,11 @@ struct HistorialComidasCard: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 2)
         )
-        .onAppear {
-            cargarComidasRecientes()
-        }
         .sheet(isPresented: $showingDetalleHistorial) {
-            DetalleHistorialComidasView(comidas: comidasRecientes)
+            DetalleHistorialComidasView(comidas: viewModel.comidasRecientes)
         }
         .sheet(item: $comidaSeleccionada) { comida in
-            DetalleComidaView(comida: comida)
+            DetalleComidaView(comida: comida, viewModel: viewModel)
         }
     }
     
@@ -94,67 +91,21 @@ struct HistorialComidasCard: View {
     // MARK: - Lista de Comidas
     private var listaComidas: some View {
         LazyVStack(spacing: 12) {
-            ForEach(comidasRecientes.prefix(3)) { comida in
+            ForEach(viewModel.comidasRecientes.prefix(3)) { comida in
                 ComidaHistorialRow(comida: comida) {
                     comidaSeleccionada = comida
                 }
             }
             
-            if comidasRecientes.count > 3 {
+            if viewModel.comidasRecientes.count > 3 {
                 Button(action: { showingDetalleHistorial = true }) {
-                    Text("Ver todas (\(comidasRecientes.count))")
+                    Text("Ver todas (\(viewModel.comidasRecientes.count))")
                         .font(.subheadline)
                         .foregroundColor(ColorHelper.Principal.primario)
                 }
                 .padding(.top, 8)
             }
         }
-    }
-    
-    // MARK: - Métodos
-    private func cargarComidasRecientes() {
-        // Para el hackathon, generar datos de demostración
-        comidasRecientes = generarComidasDemo()
-    }
-    
-    private func generarComidasDemo() -> [ComidaHistorial] {
-        let ahora = Date()
-        
-        return [
-            ComidaHistorial(
-                fecha: ahora.addingTimeInterval(-3600), // 1 hora atrás
-                tipoComida: .comida,
-                ordenUsado: .verdurasPrimero,
-                glucosaInicial: 105,
-                picoPredicho: 145,
-                picoReal: 142,
-                alimentos: ["Pollo", "Brócoli", "Arroz"],
-                cargaGlicemica: 28.5,
-                efectividad: .excelente
-            ),
-            ComidaHistorial(
-                fecha: ahora.addingTimeInterval(-14400), // 4 horas atrás
-                tipoComida: .desayuno,
-                ordenUsado: .simultaneo,
-                glucosaInicial: 98,
-                picoPredicho: 165,
-                picoReal: 172,
-                alimentos: ["Avena", "Plátano", "Miel"],
-                cargaGlicemica: 42.0,
-                efectividad: .buena
-            ),
-            ComidaHistorial(
-                fecha: ahora.addingTimeInterval(-86400), // Ayer
-                tipoComida: .cena,
-                ordenUsado: .verdurasPrimero,
-                glucosaInicial: 115,
-                picoPredicho: 155,
-                picoReal: 148,
-                alimentos: ["Salmón", "Espinacas", "Quinoa"],
-                cargaGlicemica: 22.8,
-                efectividad: .excelente
-            )
-        ]
     }
 }
 
@@ -458,7 +409,10 @@ struct DetailItem: View {
 
 struct DetalleComidaView: View {
     let comida: ComidaHistorial
+    let viewModel: HistorialComidasViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State private var picoReal: String = ""
+    @State private var showingPicoInput = false
     
     var body: some View {
         NavigationView {
@@ -526,6 +480,16 @@ struct DetalleComidaView: View {
                                     Spacer()
                                     DetailItem(titulo: "Efectividad", valor: comida.efectividad.rawValue)
                                 }
+                            } else {
+                                Button(action: { showingPicoInput = true }) {
+                                    Text("Ingresar pico real")
+                                        .font(.subheadline)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 16)
+                                        .padding(.vertical, 8)
+                                        .background(ColorHelper.Principal.primario)
+                                        .cornerRadius(8)
+                                }
                             }
                         }
                         .padding()
@@ -543,26 +507,61 @@ struct DetalleComidaView: View {
             .navigationBarItems(trailing: Button("Cerrar") {
                 presentationMode.wrappedValue.dismiss()
             })
+            .alert("Ingresar Pico Real", isPresented: $showingPicoInput) {
+                TextField("Pico real", text: $picoReal)
+                    .keyboardType(.numberPad)
+                Button("Cancelar", role: .cancel) { }
+                Button("Guardar") {
+                    if let pico = Double(picoReal) {
+                        viewModel.actualizarPicoReal(para: comida, picoReal: pico)
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }
         }
     }
 }
 
 // MARK: - Modelos de Apoyo
 
-struct ComidaHistorial: Identifiable {
-    let id = UUID()
+struct ComidaHistorial: Identifiable, Codable {
+    let id: UUID
     let fecha: Date
     let tipoComida: TipoComida
     let ordenUsado: OrdenComida
     let glucosaInicial: Double
     let picoPredicho: Double
-    let picoReal: Double?
+    var picoReal: Double?
     let alimentos: [String]
     let cargaGlicemica: Double
-    let efectividad: EfectividadPrediccion
+    var efectividad: EfectividadPrediccion
+    
+    init(
+        id: UUID = UUID(),
+        fecha: Date,
+        tipoComida: TipoComida,
+        ordenUsado: OrdenComida,
+        glucosaInicial: Double,
+        picoPredicho: Double,
+        picoReal: Double?,
+        alimentos: [String],
+        cargaGlicemica: Double,
+        efectividad: EfectividadPrediccion
+    ) {
+        self.id = id
+        self.fecha = fecha
+        self.tipoComida = tipoComida
+        self.ordenUsado = ordenUsado
+        self.glucosaInicial = glucosaInicial
+        self.picoPredicho = picoPredicho
+        self.picoReal = picoReal
+        self.alimentos = alimentos
+        self.cargaGlicemica = cargaGlicemica
+        self.efectividad = efectividad
+    }
 }
 
-enum TipoComida: String, CaseIterable {
+enum TipoComida: String, CaseIterable, Codable {
     case desayuno = "Desayuno"
     case comida = "Comida"
     case cena = "Cena"
@@ -587,7 +586,7 @@ enum TipoComida: String, CaseIterable {
     }
 }
 
-enum EfectividadPrediccion: String, CaseIterable {
+enum EfectividadPrediccion: String, CaseIterable, Codable {
     case excelente = "Excelente"
     case buena = "Buena"
     case regular = "Regular"
@@ -612,7 +611,7 @@ enum EfectividadPrediccion: String, CaseIterable {
     }
 }
 
-enum OrdenamientoHistorial: String, CaseIterable {
+enum OrdenamientoHistorial: String, CaseIterable, Codable {
     case reciente = "Reciente"
     case efectividad = "Efectividad"
     case glucosa = "Glucosa"

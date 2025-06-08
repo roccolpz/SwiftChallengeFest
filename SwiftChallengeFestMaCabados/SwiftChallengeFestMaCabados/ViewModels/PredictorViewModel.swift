@@ -22,6 +22,7 @@ class PredictorViewModel: ObservableObject {
     @Published var prediccionActual: PrediccionGlucosa?
     @Published var prediccionComparativa: [PrediccionComida] = []
     @Published var horaComidaSeleccionada: Date = Date()
+    @Published var glucosaInicial: Double = 100.0 // Default value
     
     // Estados de UI
     @Published var isLoading: Bool = false
@@ -33,6 +34,11 @@ class PredictorViewModel: ObservableObject {
     @Published var textoBusqueda: String = ""
     @Published var categoriaFiltro: CategoriaAlimento?
     @Published var mostrandoSugerencias: Bool = false
+    
+    init() {
+        // Initialize with current glucose value
+        glucosaInicial = glucosaManager.glucosaActual
+    }
     
     // MARK: - Computed Properties
     

@@ -9,11 +9,15 @@ import SwiftUI
 struct PredictorComidaView: View {
     @StateObject private var viewModel = PredictorViewModel()
     @StateObject private var glucosaManager = GlucosaManager.shared
+    @StateObject private var perfilManager = PerfilUsuarioManager.shared
     @Environment(\.presentationMode) var presentationMode
     
     @State private var currentTab: PredictorTab = .seleccionar
     @State private var showingComparacion = false
     @State private var showingConfiguracion = false
+    @State private var showingTipoComidaSelector = false
+    @State private var tipoComidaSeleccionado: TipoComida?
+    private let historialViewModel = HistorialComidasViewModel.shared
     
     var body: some View {
         NavigationView {
@@ -264,44 +268,80 @@ struct PredictorComidaView: View {
     // MARK: - Acciones de Predicción
     private var accionesPrediccion: some View {
         VStack(spacing: 12) {
-            // Botón comparar órdenes
-            Button(action: { showingComparacion = true }) {
-                HStack {
-                    Image(systemName: "chart.bar.xaxis")
-                    Text("Comparar Órdenes de Comida")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+            if viewModel.prediccionActual != nil {
+                Button(action: { showingTipoComidaSelector = true }) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("Registrar Comida")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(ColorHelper.Principal.primario)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
                 }
-                .font(.headline)
-                .foregroundColor(.accentColor)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(ColorHelper.Principal.primario.opacity(0.1))
-                )
+                
+                Button(action: { 
+                    viewModel.generarComparacion()
+                    showingComparacion = true
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.left.arrow.right")
+                        Text("Comparar Órdenes")
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(ColorHelper.Principal.primario)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+                }
             }
-            
-            // Botón guardar como favorita
-            Button(action: {
-                viewModel.guardarComoFavorita()
-            }) {
-                HStack {
-                    Image(systemName: "heart")
-                    Text("Guardar Comida como Favorita")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(Color(.secondarySystemBackground))
+        }
+        .padding(.horizontal)
+        .sheet(isPresented: $showingTipoComidaSelector) {
+            TipoComidaSelectorView { tipo in
+                tipoComidaSeleccionado = tipo
+                historialViewModel.registrarComida(
+                    alimentos: viewModel.alimentosSeleccionados,
+                    usuario: perfilManager.perfil,
+                    glucosaInicial: viewModel.glucosaInicial,
+                    tipoComida: tipo,
+                    ordenComida: viewModel.ordenComidaSeleccionado
                 )
+                presentationMode.wrappedValue.dismiss()
+            }
+        }
+    }
+    
+    // MARK: - Tipo Comida Selector
+    struct TipoComidaSelectorView: View {
+        let onConfirm: (TipoComida) -> Void
+        @Environment(\.presentationMode) var presentationMode
+        
+        var body: some View {
+            NavigationView {
+                List {
+                    ForEach(TipoComida.allCases, id: \.self) { tipo in
+                        Button(action: {
+                            onConfirm(tipo)
+                        }) {
+                            HStack {
+                                Text(tipo.emoji)
+                                    .font(.title2)
+                                
+                                Text(tipo.rawValue)
+                                    .font(.headline)
+                                
+                                Spacer()
+                            }
+                            .padding(.vertical, 8)
+                        }
+                    }
+                }
+                .navigationTitle("Tipo de Comida")
+                .navigationBarItems(trailing: Button("Cancelar") {
+                    presentationMode.wrappedValue.dismiss()
+                })
             }
         }
     }

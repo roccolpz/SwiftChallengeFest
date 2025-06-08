@@ -53,7 +53,7 @@ enum RestriccionDietetica: String, CaseIterable, Codable {
     case bajoCarbohidrato = "Bajo en Carbohidratos"
 }
 
-enum OrdenComida: CaseIterable {
+enum OrdenComida: String, CaseIterable, Codable {
     case verdurasPrimero
     case proteinasPrimero
     case carbohidratosPrimero
