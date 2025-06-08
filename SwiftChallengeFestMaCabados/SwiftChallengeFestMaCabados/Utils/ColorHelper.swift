@@ -70,11 +70,11 @@ struct ColorHelper {
     
     // MARK: - Colores de Macronutrientes
     struct Macronutrientes {
-        static let carbohidratos = Color( "FF6B35")   // Naranja cálido
-        static let proteinas = Color( "007AFF")       // Azul
-        static let grasas = Color( "FFD60A")          // Amarillo dorado
-        static let fibra = Color( "34C759")           // Verde
-        static let calorias = Color( "AF52DE")        // Púrpura
+        static let carbohidratos = Color(red: 1.0, green: 0.42, blue: 0.21)   // #FF6B35 - Naranja cálido
+        static let proteinas = Color(red: 0.0, green: 0.48, blue: 1.0)        // #007AFF - Azul
+        static let grasas = Color(red: 1.0, green: 0.4, blue: 0.7)          // #FFD60A - Amarillo dorado
+        static let fibra = Color(red: 0.20, green: 0.78, blue: 0.35)          // #34C759 - Verde
+        static let calorias = Color(red: 0.69, green: 0.32, blue: 0.87)       // #AF52DE - Púrpura
         
         // Versiones suaves para fondos
         static let carbohidratosSuave = carbohidratos.opacity(0.2)

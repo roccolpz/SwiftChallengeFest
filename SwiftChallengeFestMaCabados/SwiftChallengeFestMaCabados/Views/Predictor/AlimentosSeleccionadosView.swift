@@ -328,9 +328,24 @@ struct AlimentoSeleccionadoCard: View {
                     .fill(ColorHelper.Categorias.colorPorCategoria(alimento.categoria).opacity(0.2))
                     .frame(width: 50, height: 50)
                 
-                Image(systemName: iconoPorCategoria(alimento.categoria))
-                    .font(.title2)
-                    .foregroundColor(ColorHelper.Categorias.colorPorCategoria(alimento.categoria))
+                Group {
+                    if let imagenURL = alimento.imagen, !imagenURL.isEmpty, let url = URL(string: imagenURL) {
+                        AsyncImage(url: url) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            ProgressView()
+                                .scaleEffect(0.6)
+                        }
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    } else {
+                        Image(systemName: iconoPorCategoria(alimento.categoria))
+                            .font(.title2)
+                            .foregroundColor(ColorHelper.Categorias.colorPorCategoria(alimento.categoria))
+                    }
+                }
             }
             
             // Información del alimento
@@ -522,9 +537,24 @@ struct EditarCantidadSheet: View {
             VStack(spacing: 24) {
                 // Header del alimento
                 VStack(spacing: 16) {
-                    Image(systemName: iconoPorCategoria(alimentoConPorcion.alimento.categoria))
-                        .font(.system(size: 48))
-                        .foregroundColor(ColorHelper.Categorias.colorPorCategoria(alimentoConPorcion.alimento.categoria))
+                    Group {
+                        if let imagenURL = alimentoConPorcion.alimento.imagen, !imagenURL.isEmpty, let url = URL(string: imagenURL) {
+                            AsyncImage(url: url) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            } placeholder: {
+                                ProgressView()
+                                    .scaleEffect(0.8)
+                            }
+                            .frame(width: 80, height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                        } else {
+                            Image(systemName: iconoPorCategoria(alimentoConPorcion.alimento.categoria))
+                                .font(.system(size: 48))
+                                .foregroundColor(ColorHelper.Categorias.colorPorCategoria(alimentoConPorcion.alimento.categoria))
+                        }
+                    }
                     
                     Text(alimentoConPorcion.alimento.nombre)
                         .font(.title2)

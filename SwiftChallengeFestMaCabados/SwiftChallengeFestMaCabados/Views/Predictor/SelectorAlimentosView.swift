@@ -71,9 +71,9 @@ struct SelectorAlimentosView: View {
                     alimentoParaAgregar = nil
                 }
             )
+            .presentationDetents([.fraction(0.75)])
         }
         .sheet(isPresented: $showingAgregarPersonalizado) {
-            // TODO: Vista para agregar alimento personalizado
             AgregarAlimentoPersonalizadoView { alimento in
                 // Agregar alimento personalizado
                 print("Agregar alimento personalizado: \(alimento.nombre)")
@@ -238,30 +238,28 @@ struct SelectorAlimentosView: View {
     
     // MARK: - Lista de Alimentos
     private var listaAlimentos: some View {
-        List {
-            ForEach(viewModel.alimentosFiltrados, id: \.id) { alimento in
-                AlimentoRow(
-                    alimento: alimento,
-                    isSelected: viewModel.alimentosSeleccionados.contains(where: { $0.alimento.id == alimento.id }),
                     onTap: {
-                        // Agregar directamente con 100g
-                        viewModel.agregarAlimento(alimento, gramos: 100)
-                    },
-                    onCustomTap: {
-                        // Abrir sheet para personalizar gramos
-                        alimentoParaAgregar = alimento
-                    }
-                )
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(Color.clear)
+        ScrollView {
+            LazyVStack(spacing: 8) {
+                ForEach(viewModel.alimentosFiltrados, id: \.id) { alimento in
+                    AlimentoRow(
+                        alimento: alimento,
+                        isSelected: viewModel.alimentosSeleccionados.contains(where: { $0.alimento.id == alimento.id }),
+                        onTap: {
+                            viewModel.agregarAlimento(alimento, gramos: 100)
+                        },
+                        onCustomTap: {
+                            alimentoParaAgregar = alimento
+                        }
+                    )
+                }
             }
+            .padding(.top, 8)
         }
-        .listStyle(PlainListStyle())
         .background(Color(.systemGroupedBackground))
     }
 }
 
-// MARK: - Sugerencia Alimento Card
 struct SugerenciaAlimentoCard: View {
     let alimento: Alimento
     let onTap: () -> Void
@@ -593,13 +591,19 @@ struct AgregarAlimentoSheet: View {
                             Button(action: { gramos = String(porcion) }) {
                                 Text("\(porcion)g")
                                     .font(.subheadline)
-                                    .fontWeight(.medium)
-                                    .foregroundColor(gramos == String(porcion) ? .white : ColorHelper.Principal.primario)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(gramos == String(porcion) ? .white : Color(.systemBlue))
                                     .frame(maxWidth: .infinity)
-                                    .padding(.vertical, 8)
+                                    .padding(.vertical, 10)
                                     .background(
                                         RoundedRectangle(cornerRadius: 8)
-                                            .fill(gramos == String(porcion) ? ColorHelper.Principal.primario : ColorHelper.Principal.primario.opacity(0.1))
+                                            .fill(gramos == String(porcion) ?
+                                                  Color(.systemBlue) :
+                                                  Color(.tertiarySystemFill))
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 8)
+                                                    .stroke(Color(.systemBlue), lineWidth: 1.5)
+                                            )
                                     )
                             }
                         }
@@ -630,7 +634,7 @@ struct AgregarAlimentoSheet: View {
                                 Text("\(macrosCalculados.calorias, specifier: "%.0f") kcal")
                                     .font(.subheadline)
                                     .fontWeight(.bold)
-                                    .foregroundColor(ColorHelper.Principal.primario)
+                                    .foregroundColor(.purple)
                             }
                         }
                         .padding()
