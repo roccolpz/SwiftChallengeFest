@@ -8,14 +8,28 @@ import Foundation
 import SwiftUI
 
 enum CategoriaAlimento: String, CaseIterable, Codable {
-    case verduras = "Verduras"
-    case frutas = "Frutas"
-    case proteinas = "Proteínas"
-    case carbohidratos = "Carbohidratos"
-    case lacteos = "Lácteos"
-    case grasas = "Grasas y Aceites"
-    case bebidas = "Bebidas"
-    case procesados = "Procesados"
+    case verduras = "verduras"
+    case frutas = "frutas"
+    case proteinas = "proteinas"
+    case carbohidratos = "carbohidratos"
+    case lacteos = "lacteos"
+    case grasas = "grasas"
+    case bebidas = "bebidas"
+    case procesados = "procesados"
+    
+    // Agregar esta propiedad para mostrar nombres bonitos en la UI
+    var displayName: String {
+        switch self {
+        case .verduras: return "Verduras"
+        case .frutas: return "Frutas"
+        case .proteinas: return "Proteínas"
+        case .carbohidratos: return "Carbohidratos"
+        case .lacteos: return "Lácteos"
+        case .grasas: return "Grasas y Aceites"
+        case .bebidas: return "Bebidas"
+        case .procesados: return "Procesados"
+        }
+    }
 }
 
 enum Genero: String, CaseIterable, Codable {

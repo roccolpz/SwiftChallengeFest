@@ -262,7 +262,7 @@
       "cargaGlicemica": 1.0,
       "categoria": "verduras",
       "subcategoria": "Cruciferas",
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1VhiTrPPSs4Wsd5ybkYo-vWsJOE8iuQ0kwA&s"
+      "imagen": "https://images.vexels.com/content/143075/preview/broccoli-color-icon-8a64fb.png"
     },
     {
       "nombre": "Espinacas",
@@ -274,7 +274,7 @@
       "cargaGlicemica": 0.5,
       "categoria": "verduras",
       "subcategoria": "Hojas verdes",
-      "imagen":
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1VhiTrPPSs4Wsd5ybkYo-vWsJOE8iuQ0kwA&s"
     },
     {
       "nombre": "Lechuga",
@@ -418,7 +418,7 @@
       "cargaGlicemica": 2.0,
       "categoria": "frutas",
       "subcategoria": "Berries",
-      "imagen":
+      "imagen": "https://cdn-icons-png.flaticon.com/512/6866/6866488.png"
     },
     {
       "nombre": "Uvas",
