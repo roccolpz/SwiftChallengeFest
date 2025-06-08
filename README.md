@@ -32,13 +32,6 @@
         <li><a href="#features">Características Principales</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Comenzando</a>
-      <ul>
-        <li><a href="#prerequisites">Prerrequisitos</a></li>
-        <li><a href="#installation">Instalación</a></li>
-      </ul>
-    </li>
     <li><a href="#features-detail">Características Detalladas</a></li>
     <li><a href="#screenshots">Capturas de Pantalla</a></li>
     <li><a href="#demo-video">Video Demostración</a></li>
@@ -99,6 +92,50 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 - Recomendaciones de dosis seguras
 
 ---
+### Capturas de Pantalla
+
+### Onboarding y Configuración Inicial
+<div align="center">
+  <img src="Images/onboarding.png" alt="Onboarding" width="250"/>
+  <img src="Images/profile_setup.png" alt="Configuración de Perfil" width="250"/>
+  <img src="Images/diabetes_config.png" alt="Configuración Diabetes" width="250"/>
+</div>
+
+### Dashboard Principal
+<div align="center">
+  <img src="Images/dashboard.png" alt="Dashboard" width="250"/>
+  <img src="Images/glucose_card.png" alt="Card de Glucosa" width="250"/>
+  <img src="Images/meal_history.png" alt="Historial de Comidas" width="250"/>
+</div>
+
+### Predictor de Glucosa
+<div align="center">
+  <img src="Images/food_selector.png" alt="Selector de Alimentos" width="250"/>
+  <img src="Images/selected_foods.png" alt="Alimentos Seleccionados" width="250"/>
+  <img src="Images/prediction_graph.png" alt="Gráfica de Predicción" width="250"/>
+</div>
+
+### Orden de Comida y Comparación
+<div align="center">
+  <img src="Images/meal_order.png" alt="Orden de Comida" width="250"/>
+  <img src="Images/order_comparison.png" alt="Comparación de Órdenes" width="250"/>
+  <img src="Images/scientific_studies.png" alt="Estudios Científicos" width="250"/>
+</div>
+
+### Meal Planner
+<div align="center">
+  <img src="Images/meal_planner.png" alt="Planificador de Comidas" width="250"/>
+  <img src="Images/weekly_plan.png" alt="Plan Semanal" width="250"/>
+  <img src="Images/shopping_list.png" alt="Lista de Compras" width="250"/>
+</div>
+
+### Noticias y Perfil
+<div align="center">
+  <img src="Images/diabetes_news.png" alt="Noticias sobre Diabetes" width="250"/>
+  <img src="Images/user_profile.png" alt="Perfil de Usuario" width="250"/>
+</div>
+
+---
 
 ## Demo Video
 
@@ -136,10 +173,7 @@ El planificador de comidas utiliza JSON estructurado para generar:
 - **Tips Personalizados**: Basados en el perfil del usuario
 
 
-### Capturas de Pantalla
 
-
----
 ## Authors 
 ### MacAbados team 🦧
 
