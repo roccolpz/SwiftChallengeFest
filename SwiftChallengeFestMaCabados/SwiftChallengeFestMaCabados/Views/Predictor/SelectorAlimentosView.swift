@@ -238,7 +238,6 @@ struct SelectorAlimentosView: View {
     
     // MARK: - Lista de Alimentos
     private var listaAlimentos: some View {
-                    onTap: {
         ScrollView {
             LazyVStack(spacing: 8) {
                 ForEach(viewModel.alimentosFiltrados, id: \.id) { alimento in
