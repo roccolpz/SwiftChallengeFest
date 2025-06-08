@@ -12,6 +12,8 @@ struct SelectorAlimentosView: View {
     @State private var showingAgregarPersonalizado = false
     @State private var alimentoParaAgregar: Alimento?
     @State private var gramosPersonalizados: String = "100"
+    @State private var extractorText: String = ""
+    @State private var isExtracting: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -28,6 +30,13 @@ struct SelectorAlimentosView: View {
                     onCategoryChanged: { categoria in
                         viewModel.filtrarPorCategoria(categoria)
                     }
+                )
+                
+                // Text Extractor Search Bar
+                TextExtractorSearchBar(
+                    text: $extractorText,
+                    isLoading: $isExtracting,
+                    onExtract: extractFoods
                 )
                 
                 // Sugerencias rápidas
@@ -70,6 +79,72 @@ struct SelectorAlimentosView: View {
                 print("Agregar alimento personalizado: \(alimento.nombre)")
             }
         }
+    }
+    
+    private func extractFoods() {
+        guard !extractorText.isEmpty else { return }
+        
+        isExtracting = true
+        
+        // Create URL and request
+        guard let url = URL(string: "https://swift-challenge-fest.vercel.app/extract-foods") else {
+            isExtracting = false
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        
+        // Create request body
+        let body = ["text": extractorText]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        
+        print("Making API request with text: \(extractorText)") // Debug log
+        
+        // Make request
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                isExtracting = false
+                
+                if let error = error {
+                    print("Error extracting foods: \(error)")
+                    return
+                }
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("Response status code: \(httpResponse.statusCode)") // Debug log
+                }
+                
+                guard let data = data else {
+                    print("No data received") // Debug log
+                    return
+                }
+                
+                print("Received data: \(String(data: data, encoding: .utf8) ?? "none")") // Debug log
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(FoodExtractionResponse.self, from: data)
+                    
+                    print("Extracted foods: \(response.foods)") // Debug log
+                    
+                    // Add each extracted food to the selection
+                    for foodName in response.foods {
+                        if let alimento = alimentosManager.alimentos.first(where: { $0.nombre.localizedCaseInsensitiveContains(foodName) }) {
+                            viewModel.agregarAlimento(alimento, gramos: 100)
+                        }
+                    }
+                    
+                    // Clear the text after successful extraction
+                    extractorText = ""
+                    
+                } catch {
+                    print("Error decoding response: \(error)")
+                }
+            }
+        }.resume()
     }
     
     // MARK: - Sugerencias Rápidas
@@ -683,6 +758,49 @@ struct BouncyButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
             .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
     }
+}
+
+// MARK: - Text Extractor Search Bar
+struct TextExtractorSearchBar: View {
+    @Binding var text: String
+    @Binding var isLoading: Bool
+    let onExtract: () -> Void
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            // Text field
+            TextField("Describe lo que comiste...", text: $text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .disabled(isLoading)
+                .onSubmit {
+                    if !text.isEmpty {
+                        onExtract()
+                    }
+                }
+            
+            // Extract button
+            Button(action: onExtract) {
+                if isLoading {
+                    ProgressView()
+                        .scaleEffect(0.8)
+                } else {
+                    Image(systemName: "wand.and.stars")
+                        .foregroundColor(.white)
+                }
+            }
+            .frame(width: 40, height: 40)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(ColorHelper.Principal.primario)
+            )
+            .disabled(text.isEmpty || isLoading)
+        }
+    }
+}
+
+// MARK: - Food Extraction Response
+struct FoodExtractionResponse: Codable {
+    let foods: [String]
 }
 
 #Preview {
