@@ -12,7 +12,7 @@ struct DashboardView: View {
     @State private var showingPredictor = false
     @State private var showingPerfil = false
     @State private var showingNoticias = false
-    
+    @State private var showingMealPlanner = false
     var body: some View {
         NavigationView {
             ScrollView {
@@ -62,6 +62,10 @@ struct DashboardView: View {
         .sheet(isPresented: $showingNoticias) {
             DiabetesNewsView()
         }
+        .sheet(isPresented: $showingMealPlanner) {
+            MealPlanner()
+        }
+
         .onAppear {
             verificarConfiguracion()
         }
@@ -178,7 +182,7 @@ struct DashboardView: View {
                     icono: "frying.pan",
                     color: .green
                 ) {
-                    print("📊 Estadísticas del día")
+                    showingMealPlanner = true 
                 }
             }
             
