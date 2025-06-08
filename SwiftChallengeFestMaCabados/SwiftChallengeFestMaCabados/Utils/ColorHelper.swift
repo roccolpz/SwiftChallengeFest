@@ -171,6 +171,8 @@ struct ColorHelper {
         static let enlace = Color(.link)
     }
     
+    
+    
     // MARK: - Funciones Utilitarias
     
     /// Obtiene el color de fondo apropiado para un valor de glucosa
@@ -209,5 +211,21 @@ struct ColorHelper {
         )
         return (colorLinea, gradienteArea)
     }
+    
+    struct OrdenComidaHelper {
+        static func colorPorOrden(_ orden: OrdenComida) -> Color {
+            switch orden {
+            case .verdurasPrimero:
+                return ColorHelper.Categorias.verduras
+            case .proteinasPrimero:
+                return ColorHelper.Categorias.proteinas
+            case .carbohidratosPrimero:
+                return ColorHelper.Categorias.carbohidratos
+            case .simultaneo:
+                return ColorHelper.Categorias.lacteos
+            }
+        }
+    }
+    
 }
 
