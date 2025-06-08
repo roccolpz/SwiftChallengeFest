@@ -16,11 +16,13 @@ struct Alimento: Codable, Identifiable, Hashable {
     let indiceGlicemico: Int      // 0-100
     let cargaGlicemica: Double    // IG × carbos ÷ 100
     let categoria: CategoriaAlimento
+    let imagen: String?
     let subcategoria: String?
+    
     
     private enum CodingKeys: String, CodingKey {
         case nombre, carbohidratos, proteinas, grasas, fibra
-        case indiceGlicemico, cargaGlicemica, categoria, subcategoria
+        case indiceGlicemico, cargaGlicemica, categoria, subcategoria, imagen
     }
 }
 
