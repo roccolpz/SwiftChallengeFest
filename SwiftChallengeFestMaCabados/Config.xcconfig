@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  SwiftChallengeFestMaCabados
+//
+//  Created by Isaac Rojas on 07/06/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+APIKEY = 45a6f215832643fbb9ab45d9939d7f44

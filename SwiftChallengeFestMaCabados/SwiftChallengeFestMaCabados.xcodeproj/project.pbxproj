@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11559192DF549AE000C8A3D /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C11559182DF549AE000C8A3D /* Config.xcconfig */; };
 		E1C9CB5C2DF51B1100141845 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9CB5B2DF51B1100141845 /* WidgetKit.framework */; };
 		E1C9CB5E2DF51B1100141845 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9CB5D2DF51B1100141845 /* SwiftUI.framework */; };
 		E1C9CB6F2DF51B1300141845 /* GlucosaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C11559182DF549AE000C8A3D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GlucosaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C9CB5B2DF51B1100141845 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		E1C9CB5D2DF51B1100141845 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -44,6 +46,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C115591B2DF549F4000C8A3D /* Exceptions for "SwiftChallengeFestMaCabados" folder in "SwiftChallengeFestMaCabados" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E1F90E882DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */;
+		};
 		E1C9CB702DF51B1300141845 /* Exceptions for "GlucosaWidget" folder in "GlucosaWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -64,6 +73,9 @@
 		};
 		E1F90E8B2DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C115591B2DF549F4000C8A3D /* Exceptions for "SwiftChallengeFestMaCabados" folder in "SwiftChallengeFestMaCabados" target */,
+			);
 			path = SwiftChallengeFestMaCabados;
 			sourceTree = "<group>";
 		};
@@ -101,6 +113,7 @@
 		E1F90E802DF4BC2200E5DFD7 = {
 			isa = PBXGroup;
 			children = (
+				C11559182DF549AE000C8A3D /* Config.xcconfig */,
 				E1F90E8B2DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */,
 				E1C9CB5F2DF51B1100141845 /* GlucosaWidget */,
 				E1C9CB5A2DF51B1100141845 /* Frameworks */,
@@ -209,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11559192DF549AE000C8A3D /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +319,7 @@
 		};
 		E1F90E922DF4BC2300E5DFD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11559182DF549AE000C8A3D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -369,6 +384,7 @@
 		};
 		E1F90E932DF4BC2300E5DFD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11559182DF549AE000C8A3D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -434,6 +450,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftChallengeFestMaCabados/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app necesita usar la cámara para tomar fotos de tus comidas y así analizar su información nutrimental.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -465,6 +482,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftChallengeFestMaCabados/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app necesita usar la cámara para tomar fotos de tus comidas y así analizar su información nutrimental.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
