@@ -17,6 +17,8 @@ struct ColorHelper {
         static let superficie = Color.white
         static let texto = Color.primary
         static let textoSecundario = Color.secondary
+        static let grisSistema2       = Color("C7C7CC")   // systemGray2
+        static let grisSistema3       = Color("D1D1D6")   // systemGray3
     }
     
     // MARK: - Colores de Glucosa (Basados en Rangos Clínicos)

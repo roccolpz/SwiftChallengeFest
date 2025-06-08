@@ -29,6 +29,8 @@ struct DashboardView: View {
                     // Botón principal - Predictor
                     botonPredictor
                     
+                    HistorialComidasCard()
+                    
                     // Acciones rápidas
                     accionesRapidas
                     
@@ -116,7 +118,7 @@ struct DashboardView: View {
             HStack(spacing: 16) {
                 ZStack {
                     Circle()
-                        .fill(ColorHelper.Principal.primario)
+                        .fill(.orange)
                         .frame(width: 56, height: 56)
                     
                     Image(systemName: "fork.knife")
@@ -163,7 +165,7 @@ struct DashboardView: View {
                     titulo: "Simular",
                     subtitulo: "Medición",
                     icono: "arrow.clockwise",
-                    color: ColorHelper.Estados.info
+                    color: .blue
                 ) {
                     glucosaManager.simularMedicionAutomatica()
                 }
@@ -172,7 +174,7 @@ struct DashboardView: View {
                     titulo: "Estadísticas",
                     subtitulo: "Del día",
                     icono: "chart.bar.fill",
-                    color: ColorHelper.Estados.exito
+                    color: .green
                 ) {
                     print("📊 Estadísticas del día")
                 }
@@ -192,7 +194,7 @@ struct DashboardView: View {
                     titulo: "Configurar",
                     subtitulo: "Perfil",
                     icono: "gearshape.fill",
-                    color: ColorHelper.Estados.neutro
+                    color: .gray
                 ) {
                     showingPerfil = true
                 }
@@ -298,6 +300,14 @@ struct AccionRapidaCard: View {
     let icono: String
     let color: Color
     let accion: () -> Void
+    @Environment(\.colorScheme) private var colorScheme
+
+    private var shadowColor: Color {
+        colorScheme == .dark
+            ? Color.white.opacity(0.3)
+            : Color.black.opacity(0.1)
+    }
+
     
     var body: some View {
         Button(action: accion) {
@@ -325,6 +335,8 @@ struct AccionRapidaCard: View {
             )
         }
         .buttonStyle(PresionadoButtonStyle())
+        .shadow(color: shadowColor, radius: 4, x: 0, y: 2)
+
     }
 }
 

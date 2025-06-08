@@ -10,12 +10,15 @@ struct GlucosaActualCard: View {
     @ObservedObject var glucosaManager: GlucosaManager
     @State private var showingEditor = false
     @State private var tempGlucosa = ""
+    @State private var currentTime = Date()
+    private let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     
     private var categoriaGlucosa: (categoria: String, color: Color, emoji: String) {
         return AppConstants.Glucosa.categoriaGlucosa(glucosaManager.glucosaActual)
     }
     
     var body: some View {
+        
         VStack(spacing: 0) {
             // Header con estado
             HStack {
@@ -98,7 +101,11 @@ struct GlucosaActualCard: View {
                 onSave: { nuevaGlucosa in
                     glucosaManager.actualizarGlucosa(nuevaGlucosa)
                 }
-            )
+            )                .presentationDetents([.fraction(0.70)])
+
+        }
+        .onReceive(timer) { _ in
+            currentTime = Date()
         }
     }
 }
@@ -197,11 +204,11 @@ struct GlucosaEditorSheet: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 24) {
+            VStack(spacing: 16) {
                 // Header
-                VStack(spacing: 8) {
+                VStack(spacing: 6) {
                     Image(systemName: "drop.fill")
-                        .font(.system(size: 48))
+                        .font(.system(size: 40))
                         .foregroundColor(.red)
                     
                     Text("Actualizar Glucosa")
@@ -246,7 +253,7 @@ struct GlucosaEditorSheet: View {
                 // Preview
                 if let glucosaPreview = glucosaValida {
                     let categoria = AppConstants.Glucosa.categoriaGlucosa(glucosaPreview)
-                    
+            
                     VStack(spacing: 8) {
                         Text("Vista previa:")
                             .font(.subheadline)
@@ -274,8 +281,9 @@ struct GlucosaEditorSheet: View {
                         )
                     }
                 }
+
                 
-                Spacer()
+       
                 
                 // Botones rápidos
                 VStack(spacing: 12) {
