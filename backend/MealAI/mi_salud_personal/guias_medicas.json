@@ -1,0 +1,30 @@
+{
+  "general": [
+    "Mantener una dieta balanceada con variedad de nutrientes.",
+    "Realizar al menos 150 minutos de ejercicio moderado por semana.",
+    "Dormir 7-9 horas por noche para recuperación óptima.",
+    "Mantenerse hidratado bebiendo 8-10 vasos de agua al día.",
+    "Gestionar el estrés a través de técnicas de relajación."
+  ],
+  "diabetes": [
+    "Monitorear glucosa en sangre según indicaciones médicas.",
+    "Mantener dieta baja en carbohidratos simples y azúcares añadidos.",
+    "Distribuir comidas en porciones pequeñas y frecuentes.",
+    "Incluir fibra en cada comida para control glucémico.",
+    "Revisar niveles de HbA1c cada 3 meses con tu médico."
+  ],
+  "hipertension": [
+    "Limitar sodio a menos de 2,300 mg por día (ideal 1,500 mg).",
+    "Incluir alimentos ricos en potasio como plátanos y espinacas.",
+    "Mantener peso saludable para reducir presión arterial.",
+    "Limitar alcohol y evitar tabaco completamente.",
+    "Monitorear presión arterial regularmente en casa."
+  ],
+  "cardiovascular": [
+    "Incluir grasas saludables como omega-3 en la dieta.",
+    "Realizar ejercicio aeróbico regular para fortalecer el corazón.",
+    "Controlar niveles de colesterol cada 6 meses.",
+    "Evitar grasas trans y alimentos procesados.",
+    "Mantener un peso corporal saludable."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "general": [
+    "Elegir alimentos con bajo índice glucémico (IG < 55) para mejor control de glucosa.",
+    "Priorizar alimentos ricos en fibra para mejorar saciedad y digestión.",
+    "Combinar proteínas magras con carbohidratos complejos.",
+    "Incluir grasas saludables como aguacate, frutos secos y aceite de oliva.",
+    "Mantener porciones controladas según las características nutricionales."
+  ],
+  "diabetes": [
+    "Evitar alimentos con carga glucémica alta (>20).",
+    "Preferir frutas con IG bajo como fresas, arándanos y manzanas.",
+    "Elegir carbohidratos integrales sobre refinados.",
+    "Incluir legumbres por su bajo IG y alto contenido de fibra.",
+    "Monitorear carbohidratos totales por comida."
+  ],
+  "hipertension": [
+    "Limitar alimentos procesados altos en sodio.",
+    "Incluir frutas y verduras ricas en potasio.",
+    "Elegir lácteos bajos en grasa.",
+    "Usar aceite de oliva en lugar de grasas saturadas.",
+    "Controlar porciones de grasas totales."
+  ],
+  "perdida_peso": [
+    "Priorizar alimentos de baja densidad calórica.",
+    "Incluir verduras de hoja verde en cada comida.",
+    "Elegir proteínas magras como pollo sin piel y pescados magros.",
+    "Controlar porciones de grasas y carbohidratos.",
+    "Aumentar consumo de fibra para mayor saciedad."
+  ]
+}

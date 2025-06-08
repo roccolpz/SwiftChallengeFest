@@ -1,0 +1,37 @@
+{
+  "general": [
+    "Incluir variedad de colores en los platos para obtener diferentes nutrientes.",
+    "Preparar comidas caseras para controlar ingredientes y porciones.",
+    "Usar hierbas y especias naturales en lugar de sal para dar sabor.",
+    "Incluir proteínas magras en cada comida principal.",
+    "Elegir carbohidratos complejos como quinoa, avena y arroz integral."
+  ],
+  "desayunos": [
+    "Combinar proteína, fibra y grasas saludables en el desayuno.",
+    "Preparar avena nocturna con frutas y semillas para desayunos rápidos.",
+    "Incluir huevos como fuente de proteína completa.",
+    "Agregar frutas frescas o secas para vitaminas y antioxidantes.",
+    "Evitar cereales procesados altos en azúcar."
+  ],
+  "almuerzos": [
+    "Crear ensaladas balanceadas con proteína, vegetales y grasas saludables.",
+    "Preparar sopas caseras ricas en vegetales y legumbres.",
+    "Usar wraps integrales con rellenos nutritivos.",
+    "Incluir aguacate como fuente de grasas saludables.",
+    "Preparar batch cooking para almuerzos de la semana."
+  ],
+  "cenas": [
+    "Mantener cenas ligeras pero nutritivas.",
+    "Incluir pescado al menos 2 veces por semana.",
+    "Preparar vegetales al vapor o asados con especias.",
+    "Usar métodos de cocción saludables como horneado o plancha.",
+    "Evitar comidas pesadas 3 horas antes de dormir."
+  ],
+  "snacks": [
+    "Combinar frutas con frutos secos para snacks balanceados.",
+    "Preparar vegetales cortados con hummus casero.",
+    "Elegir yogur griego natural con frutas.",
+    "Mantener porciones controladas de frutos secos.",
+    "Hidratarse adecuadamente entre comidas."
+  ]
+}
