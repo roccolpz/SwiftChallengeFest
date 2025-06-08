@@ -6,11 +6,62 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E1C9CB5C2DF51B1100141845 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9CB5B2DF51B1100141845 /* WidgetKit.framework */; };
+		E1C9CB5E2DF51B1100141845 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9CB5D2DF51B1100141845 /* SwiftUI.framework */; };
+		E1C9CB6F2DF51B1300141845 /* GlucosaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1C9CB6D2DF51B1300141845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1F90E812DF4BC2200E5DFD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1C9CB582DF51B1100141845;
+			remoteInfo = GlucosaWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1C9CB742DF51B1300141845 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1C9CB6F2DF51B1300141845 /* GlucosaWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GlucosaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C9CB5B2DF51B1100141845 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E1C9CB5D2DF51B1100141845 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		E1F90E892DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftChallengeFestMaCabados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E1C9CB702DF51B1300141845 /* Exceptions for "GlucosaWidget" folder in "GlucosaWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E1C9CB582DF51B1100141845 /* GlucosaWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E1C9CB5F2DF51B1100141845 /* GlucosaWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E1C9CB702DF51B1300141845 /* Exceptions for "GlucosaWidget" folder in "GlucosaWidgetExtension" target */,
+			);
+			path = GlucosaWidget;
+			sourceTree = "<group>";
+		};
 		E1F90E8B2DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SwiftChallengeFestMaCabados;
@@ -19,6 +70,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E1C9CB562DF51B1100141845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C9CB5E2DF51B1100141845 /* SwiftUI.framework in Frameworks */,
+				E1C9CB5C2DF51B1100141845 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1F90E862DF4BC2200E5DFD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +89,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1C9CB5A2DF51B1100141845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1C9CB5B2DF51B1100141845 /* WidgetKit.framework */,
+				E1C9CB5D2DF51B1100141845 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1F90E802DF4BC2200E5DFD7 = {
 			isa = PBXGroup;
 			children = (
 				E1F90E8B2DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */,
+				E1C9CB5F2DF51B1100141845 /* GlucosaWidget */,
+				E1C9CB5A2DF51B1100141845 /* Frameworks */,
 				E1F90E8A2DF4BC2200E5DFD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F90E892DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados.app */,
+				E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +120,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E1C9CB582DF51B1100141845 /* GlucosaWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1C9CB712DF51B1300141845 /* Build configuration list for PBXNativeTarget "GlucosaWidgetExtension" */;
+			buildPhases = (
+				E1C9CB552DF51B1100141845 /* Sources */,
+				E1C9CB562DF51B1100141845 /* Frameworks */,
+				E1C9CB572DF51B1100141845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E1C9CB5F2DF51B1100141845 /* GlucosaWidget */,
+			);
+			name = GlucosaWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = GlucosaWidgetExtension;
+			productReference = E1C9CB592DF51B1100141845 /* GlucosaWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E1F90E882DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1F90E942DF4BC2300E5DFD7 /* Build configuration list for PBXNativeTarget "SwiftChallengeFestMaCabados" */;
@@ -55,10 +149,12 @@
 				E1F90E852DF4BC2200E5DFD7 /* Sources */,
 				E1F90E862DF4BC2200E5DFD7 /* Frameworks */,
 				E1F90E872DF4BC2200E5DFD7 /* Resources */,
+				E1C9CB742DF51B1300141845 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1C9CB6E2DF51B1300141845 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E1F90E8B2DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */,
@@ -80,6 +176,9 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					E1C9CB582DF51B1100141845 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					E1F90E882DF4BC2200E5DFD7 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -100,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				E1F90E882DF4BC2200E5DFD7 /* SwiftChallengeFestMaCabados */,
+				E1C9CB582DF51B1100141845 /* GlucosaWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E1C9CB572DF51B1100141845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1F90E872DF4BC2200E5DFD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +222,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E1C9CB552DF51B1100141845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1F90E852DF4BC2200E5DFD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +238,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E1C9CB6E2DF51B1300141845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1C9CB582DF51B1100141845 /* GlucosaWidgetExtension */;
+			targetProxy = E1C9CB6D2DF51B1300141845 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E1C9CB722DF51B1300141845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6T99687P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlucosaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GlucosaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.SwiftChallengeFestMaCabados.GlucosaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1C9CB732DF51B1300141845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q6T99687P7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlucosaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GlucosaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.tec.SwiftChallengeFestMaCabados.GlucosaWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E1F90E922DF4BC2300E5DFD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +487,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E1C9CB712DF51B1300141845 /* Build configuration list for PBXNativeTarget "GlucosaWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C9CB722DF51B1300141845 /* Debug */,
+				E1C9CB732DF51B1300141845 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1F90E842DF4BC2200E5DFD7 /* Build configuration list for PBXProject "SwiftChallengeFestMaCabados" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
