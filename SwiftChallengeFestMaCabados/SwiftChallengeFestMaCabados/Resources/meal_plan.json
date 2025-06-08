@@ -1,0 +1,1988 @@
+{
+  "meal_plan": {
+    "metadatos": {
+      "usuario": "Santiago",
+      "fecha_generacion": "2025-06-07T23:01:48.372594",
+      "perfil": {
+        "edad": 21,
+        "peso": 112.0,
+        "imc": 34.6,
+        "es_diabetico": true,
+        "tipo_diabetes": "tipo2",
+        "nivel_control": "ESTRICTO"
+      },
+      "horarios": {
+        "desayuno": "07:30",
+        "almuerzo": "13:00",
+        "cena": "19:30"
+      },
+      "alimentos_favoritos": [
+        "Arroz integral cocido",
+        "Pollo pechuga sin piel",
+        "Espinacas",
+        "Manzana"
+      ]
+    },
+    "dias": {
+      "lunes": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Lentejas cocidas",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 9.0,
+                "grasas": 0.4,
+                "fibra": 8.0,
+                "indice_glucemico": 29,
+                "carga_glucemica": 5.8
+              }
+            },
+            {
+              "nombre": "Huevos enteros",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 1.1,
+                "proteinas": 13.0,
+                "grasas": 11.0,
+                "fibra": 0.0,
+                "indice_glucemico": 0,
+                "carga_glucemica": 0.0
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 44.1,
+            "proteinas_total": 24.6,
+            "grasas_total": 12.3,
+            "fibra_total": 9.8,
+            "carga_glucemica_total": 17.3
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Lentejas cocidas",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 9.0,
+                "grasas": 0.4,
+                "fibra": 8.0,
+                "indice_glucemico": 29,
+                "carga_glucemica": 5.8
+              }
+            },
+            {
+              "nombre": "Huevos enteros",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 1.1,
+                "proteinas": 13.0,
+                "grasas": 11.0,
+                "fibra": 0.0,
+                "indice_glucemico": 0,
+                "carga_glucemica": 0.0
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Arroz blanco cocido",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 28.0,
+                "proteinas": 2.7,
+                "grasas": 0.3,
+                "fibra": 0.4,
+                "indice_glucemico": 73,
+                "carga_glucemica": 20.4
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 72.1,
+            "proteinas_total": 27.3,
+            "grasas_total": 12.6,
+            "fibra_total": 10.2,
+            "carga_glucemica_total": 37.7
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Lentejas cocidas",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 9.0,
+                "grasas": 0.4,
+                "fibra": 8.0,
+                "indice_glucemico": 29,
+                "carga_glucemica": 5.8
+              }
+            },
+            {
+              "nombre": "Huevos enteros",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 1.1,
+                "proteinas": 13.0,
+                "grasas": 11.0,
+                "fibra": 0.0,
+                "indice_glucemico": 0,
+                "carga_glucemica": 0.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 24.7,
+            "proteinas_total": 24.9,
+            "grasas_total": 11.8,
+            "fibra_total": 10.2,
+            "carga_glucemica_total": 6.3
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 168.9,
+          "proteinas_total": 77.4,
+          "grasas_total": 37.1,
+          "fibra_total": 35.0,
+          "carga_glucemica_total": 71.3,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "martes": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Pan integral",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 43.0,
+                "proteinas": 13.0,
+                "grasas": 4.2,
+                "fibra": 7.0,
+                "indice_glucemico": 51,
+                "carga_glucemica": 21.9
+              }
+            },
+            {
+              "nombre": "Pan blanco",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 49.0,
+                "proteinas": 9.0,
+                "grasas": 3.2,
+                "fibra": 2.7,
+                "indice_glucemico": 75,
+                "carga_glucemica": 36.8
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 115.0,
+            "proteinas_total": 24.6,
+            "grasas_total": 8.3,
+            "fibra_total": 11.5,
+            "carga_glucemica_total": 70.2
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Arroz blanco cocido",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 28.0,
+                "proteinas": 2.7,
+                "grasas": 0.3,
+                "fibra": 0.4,
+                "indice_glucemico": 73,
+                "carga_glucemica": 20.4
+              }
+            },
+            {
+              "nombre": "Avena cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 12.0,
+                "proteinas": 2.4,
+                "grasas": 1.4,
+                "fibra": 1.7,
+                "indice_glucemico": 42,
+                "carga_glucemica": 5.0
+              }
+            },
+            {
+              "nombre": "Pan integral",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 43.0,
+                "proteinas": 13.0,
+                "grasas": 4.2,
+                "fibra": 7.0,
+                "indice_glucemico": 51,
+                "carga_glucemica": 21.9
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 86.6,
+            "proteinas_total": 21.0,
+            "grasas_total": 6.3,
+            "fibra_total": 11.3,
+            "carga_glucemica_total": 47.8
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Pan integral",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 43.0,
+                "proteinas": 13.0,
+                "grasas": 4.2,
+                "fibra": 7.0,
+                "indice_glucemico": 51,
+                "carga_glucemica": 21.9
+              }
+            },
+            {
+              "nombre": "Pasta blanca cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 25.0,
+                "proteinas": 5.0,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 12.5
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 91.0,
+            "proteinas_total": 20.6,
+            "grasas_total": 6.0,
+            "fibra_total": 10.6,
+            "carga_glucemica_total": 45.9
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 320.6,
+          "proteinas_total": 66.8,
+          "grasas_total": 21.0,
+          "fibra_total": 38.2,
+          "carga_glucemica_total": 173.9,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "miercoles": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Avena cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 12.0,
+                "proteinas": 2.4,
+                "grasas": 1.4,
+                "fibra": 1.7,
+                "indice_glucemico": 42,
+                "carga_glucemica": 5.0
+              }
+            },
+            {
+              "nombre": "Arroz blanco cocido",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 28.0,
+                "proteinas": 2.7,
+                "grasas": 0.3,
+                "fibra": 0.4,
+                "indice_glucemico": 73,
+                "carga_glucemica": 20.4
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 63.0,
+            "proteinas_total": 7.7,
+            "grasas_total": 2.6,
+            "fibra_total": 3.9,
+            "carga_glucemica_total": 36.9
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Garbanzos cocidos",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 27.0,
+                "proteinas": 8.0,
+                "grasas": 2.6,
+                "fibra": 8.0,
+                "indice_glucemico": 33,
+                "carga_glucemica": 8.9
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Pan integral",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 43.0,
+                "proteinas": 13.0,
+                "grasas": 4.2,
+                "fibra": 7.0,
+                "indice_glucemico": 51,
+                "carga_glucemica": 21.9
+              }
+            },
+            {
+              "nombre": "Tortilla de maíz",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 46.0,
+                "proteinas": 6.0,
+                "grasas": 4.5,
+                "fibra": 5.2,
+                "indice_glucemico": 52,
+                "carga_glucemica": 23.9
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 139.0,
+            "proteinas_total": 29.6,
+            "grasas_total": 12.2,
+            "fibra_total": 22.0,
+            "carga_glucemica_total": 66.2
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Garbanzos cocidos",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 27.0,
+                "proteinas": 8.0,
+                "grasas": 2.6,
+                "fibra": 8.0,
+                "indice_glucemico": 33,
+                "carga_glucemica": 8.9
+              }
+            },
+            {
+              "nombre": "Cerdo lomo",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 0.0,
+                "proteinas": 27.0,
+                "grasas": 8.0,
+                "fibra": 0.0,
+                "indice_glucemico": 0,
+                "carga_glucemica": 0.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 30.6,
+            "proteinas_total": 37.9,
+            "grasas_total": 11.0,
+            "fibra_total": 10.2,
+            "carga_glucemica_total": 9.4
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 260.6,
+          "proteinas_total": 75.8,
+          "grasas_total": 26.2,
+          "fibra_total": 40.9,
+          "carga_glucemica_total": 122.5,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "jueves": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Pasta blanca cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 25.0,
+                "proteinas": 5.0,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 12.5
+              }
+            },
+            {
+              "nombre": "Tortilla de maíz",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 46.0,
+                "proteinas": 6.0,
+                "grasas": 4.5,
+                "fibra": 5.2,
+                "indice_glucemico": 52,
+                "carga_glucemica": 23.9
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 94.0,
+            "proteinas_total": 13.6,
+            "grasas_total": 6.3,
+            "fibra_total": 8.8,
+            "carga_glucemica_total": 47.9
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Garbanzos cocidos",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 27.0,
+                "proteinas": 8.0,
+                "grasas": 2.6,
+                "fibra": 8.0,
+                "indice_glucemico": 33,
+                "carga_glucemica": 8.9
+              }
+            },
+            {
+              "nombre": "Quinoa cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 22.0,
+                "proteinas": 4.4,
+                "grasas": 1.9,
+                "fibra": 2.8,
+                "indice_glucemico": 35,
+                "carga_glucemica": 7.7
+              }
+            },
+            {
+              "nombre": "Camote cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 3.0,
+                "indice_glucemico": 54,
+                "carga_glucemica": 10.8
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 72.6,
+            "proteinas_total": 17.3,
+            "grasas_total": 5.0,
+            "fibra_total": 16.0,
+            "carga_glucemica_total": 27.9
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Apio",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 3.0,
+                "proteinas": 0.7,
+                "grasas": 0.2,
+                "fibra": 1.6,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Avena cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 12.0,
+                "proteinas": 2.4,
+                "grasas": 1.4,
+                "fibra": 1.7,
+                "indice_glucemico": 42,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 38.0,
+            "proteinas_total": 5.7,
+            "grasas_total": 2.5,
+            "fibra_total": 5.1,
+            "carga_glucemica_total": 17.0
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 232.6,
+          "proteinas_total": 37.2,
+          "grasas_total": 14.2,
+          "fibra_total": 34.7,
+          "carga_glucemica_total": 102.8,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "viernes": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Quinoa cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 22.0,
+                "proteinas": 4.4,
+                "grasas": 1.9,
+                "fibra": 2.8,
+                "indice_glucemico": 35,
+                "carga_glucemica": 7.7
+              }
+            },
+            {
+              "nombre": "Tortilla de harina",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 45.0,
+                "proteinas": 8.0,
+                "grasas": 8.0,
+                "fibra": 2.5,
+                "indice_glucemico": 62,
+                "carga_glucemica": 27.9
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 90.0,
+            "proteinas_total": 15.0,
+            "grasas_total": 10.8,
+            "fibra_total": 7.1,
+            "carga_glucemica_total": 47.1
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Camote cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 3.0,
+                "indice_glucemico": 54,
+                "carga_glucemica": 10.8
+              }
+            },
+            {
+              "nombre": "Pan blanco",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 49.0,
+                "proteinas": 9.0,
+                "grasas": 3.2,
+                "fibra": 2.7,
+                "indice_glucemico": 75,
+                "carga_glucemica": 36.8
+              }
+            },
+            {
+              "nombre": "Papa cocida",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 17.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 2.2,
+                "indice_glucemico": 78,
+                "carga_glucemica": 13.3
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 109.0,
+            "proteinas_total": 15.6,
+            "grasas_total": 4.3,
+            "fibra_total": 9.7,
+            "carga_glucemica_total": 72.4
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Lechuga",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 3.0,
+                "proteinas": 1.4,
+                "grasas": 0.2,
+                "fibra": 1.3,
+                "indice_glucemico": 10,
+                "carga_glucemica": 0.3
+              }
+            },
+            {
+              "nombre": "Plátano",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 1.1,
+                "grasas": 0.3,
+                "fibra": 2.6,
+                "indice_glucemico": 51,
+                "carga_glucemica": 11.7
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 29.6,
+            "proteinas_total": 5.4,
+            "grasas_total": 0.9,
+            "fibra_total": 6.1,
+            "carga_glucemica_total": 12.5
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 256.6,
+          "proteinas_total": 36.6,
+          "grasas_total": 16.4,
+          "fibra_total": 27.7,
+          "carga_glucemica_total": 142.0,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "sabado": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Papa cocida",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 17.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 2.2,
+                "indice_glucemico": 78,
+                "carga_glucemica": 13.3
+              }
+            },
+            {
+              "nombre": "Camote cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 3.0,
+                "indice_glucemico": 54,
+                "carga_glucemica": 10.8
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 60.0,
+            "proteinas_total": 6.6,
+            "grasas_total": 1.1,
+            "fibra_total": 7.0,
+            "carga_glucemica_total": 35.6
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Papa cocida",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 17.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 2.2,
+                "indice_glucemico": 78,
+                "carga_glucemica": 13.3
+              }
+            },
+            {
+              "nombre": "Tortilla de harina",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 45.0,
+                "proteinas": 8.0,
+                "grasas": 8.0,
+                "fibra": 2.5,
+                "indice_glucemico": 62,
+                "carga_glucemica": 27.9
+              }
+            },
+            {
+              "nombre": "Pasta blanca cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 25.0,
+                "proteinas": 5.0,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 12.5
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 90.6,
+            "proteinas_total": 17.9,
+            "grasas_total": 9.4,
+            "fibra_total": 8.7,
+            "carga_glucemica_total": 54.2
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Fresas",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 8.0,
+                "proteinas": 0.7,
+                "grasas": 0.3,
+                "fibra": 2.0,
+                "indice_glucemico": 25,
+                "carga_glucemica": 2.0
+              }
+            },
+            {
+              "nombre": "Camote cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 20.0,
+                "proteinas": 2.0,
+                "grasas": 0.1,
+                "fibra": 3.0,
+                "indice_glucemico": 54,
+                "carga_glucemica": 10.8
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 51.0,
+            "proteinas_total": 5.3,
+            "grasas_total": 1.3,
+            "fibra_total": 6.8,
+            "carga_glucemica_total": 24.3
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 229.6,
+          "proteinas_total": 30.4,
+          "grasas_total": 12.2,
+          "fibra_total": 27.3,
+          "carga_glucemica_total": 124.1,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      },
+      "domingo": {
+        "desayuno": {
+          "hora": "07:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Garbanzos cocidos",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 27.0,
+                "proteinas": 8.0,
+                "grasas": 2.6,
+                "fibra": 8.0,
+                "indice_glucemico": 33,
+                "carga_glucemica": 8.9
+              }
+            },
+            {
+              "nombre": "Tofu",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 3.0,
+                "proteinas": 15.0,
+                "grasas": 8.0,
+                "fibra": 2.3,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 53.0,
+            "proteinas_total": 25.6,
+            "grasas_total": 11.5,
+            "fibra_total": 12.1,
+            "carga_glucemica_total": 20.9
+          }
+        },
+        "snack_matutino": {
+          "hora": "10:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "almuerzo": {
+          "hora": "13:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Apio",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 3.0,
+                "proteinas": 0.7,
+                "grasas": 0.2,
+                "fibra": 1.6,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Frijoles negros cocidos",
+              "porcion_sugerida": "1 taza",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 9.0,
+                "grasas": 0.5,
+                "fibra": 8.7,
+                "indice_glucemico": 24,
+                "carga_glucemica": 5.5
+              }
+            },
+            {
+              "nombre": "Arroz integral cocido",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 23.0,
+                "proteinas": 2.6,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 11.5
+              }
+            },
+            {
+              "nombre": "Pasta blanca cocida",
+              "porcion_sugerida": "3/4 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 25.0,
+                "proteinas": 5.0,
+                "grasas": 0.9,
+                "fibra": 1.8,
+                "indice_glucemico": 50,
+                "carga_glucemica": 12.5
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 74.0,
+            "proteinas_total": 17.3,
+            "grasas_total": 2.5,
+            "fibra_total": 13.9,
+            "carga_glucemica_total": 30.0
+          }
+        },
+        "merienda": {
+          "hora": "16:00",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Manzana",
+              "porcion_sugerida": "1 mediana",
+              "orden_consumo": 4,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 14.0,
+                "proteinas": 0.3,
+                "grasas": 0.2,
+                "fibra": 2.4,
+                "indice_glucemico": 36,
+                "carga_glucemica": 5.0
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 14.0,
+            "proteinas_total": 0.3,
+            "grasas_total": 0.2,
+            "fibra_total": 2.4,
+            "carga_glucemica_total": 5.0
+          }
+        },
+        "cena": {
+          "hora": "19:30",
+          "alimentos_en_orden": [
+            {
+              "nombre": "Espinacas",
+              "porcion_sugerida": "1-2 tazas",
+              "orden_consumo": 1,
+              "es_favorito": true,
+              "datos_nutricionales": {
+                "carbohidratos": 3.6,
+                "proteinas": 2.9,
+                "grasas": 0.4,
+                "fibra": 2.2,
+                "indice_glucemico": 15,
+                "carga_glucemica": 0.5
+              }
+            },
+            {
+              "nombre": "Atún",
+              "porcion_sugerida": "150g",
+              "orden_consumo": 2,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 0.0,
+                "proteinas": 30.0,
+                "grasas": 1.0,
+                "fibra": 0.0,
+                "indice_glucemico": 0,
+                "carga_glucemica": 0.0
+              }
+            },
+            {
+              "nombre": "Tortilla de harina",
+              "porcion_sugerida": "1/2 taza",
+              "orden_consumo": 4,
+              "es_favorito": false,
+              "datos_nutricionales": {
+                "carbohidratos": 45.0,
+                "proteinas": 8.0,
+                "grasas": 8.0,
+                "fibra": 2.5,
+                "indice_glucemico": 62,
+                "carga_glucemica": 27.9
+              }
+            }
+          ],
+          "balance_nutricional": {
+            "carbohidratos_total": 48.6,
+            "proteinas_total": 40.9,
+            "grasas_total": 9.4,
+            "fibra_total": 4.7,
+            "carga_glucemica_total": 28.4
+          }
+        },
+        "balance_diario": {
+          "carbohidratos_total": 203.6,
+          "proteinas_total": 84.4,
+          "grasas_total": 23.8,
+          "fibra_total": 35.5,
+          "carga_glucemica_total": 89.3,
+          "evaluacion": "⚠️ Revisar porciones"
+        }
+      }
+    },
+    "resumen_semanal": {
+      "totales_semanales": {
+        "carbohidratos": 1672.5,
+        "proteinas": 408.6,
+        "grasas": 150.9,
+        "fibra": 239.3,
+        "carga_glucemica": 825.9
+      },
+      "promedios_diarios": {
+        "carbohidratos_promedio_diario": 238.9,
+        "proteinas_promedio_diario": 58.4,
+        "grasas_promedio_diario": 21.6,
+        "fibra_promedio_diario": 34.2,
+        "carga_glucemica_promedio_diario": 118.0
+      },
+      "beneficio_orden_optimo": "Reducción estimada de picos glucémicos: 25-37%",
+      "cumplimiento_objetivos": {
+        "objetivos_individuales": {
+          "carbohidratos": false,
+          "proteinas": true,
+          "fibra": true,
+          "carga_glucemica": false
+        },
+        "porcentaje_cumplimiento": 50.0,
+        "estado_general": "Mejorable"
+      }
+    },
+    "lista_compras": {
+      "🥩 Proteínas": [
+        {
+          "alimento": "Lentejas cocidas",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Huevos enteros",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Garbanzos cocidos",
+          "cantidad_semanal": 4,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Cerdo lomo",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Tofu",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Frijoles negros cocidos",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Atún",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        }
+      ],
+      "🍞 Carbohidratos": [
+        {
+          "alimento": "Arroz integral cocido",
+          "cantidad_semanal": 14,
+          "es_favorito": true
+        },
+        {
+          "alimento": "Manzana",
+          "cantidad_semanal": 14,
+          "es_favorito": true
+        },
+        {
+          "alimento": "Arroz blanco cocido",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Pan integral",
+          "cantidad_semanal": 4,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Pan blanco",
+          "cantidad_semanal": 2,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Avena cocida",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Pasta blanca cocida",
+          "cantidad_semanal": 4,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Tortilla de maíz",
+          "cantidad_semanal": 2,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Quinoa cocida",
+          "cantidad_semanal": 2,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Camote cocido",
+          "cantidad_semanal": 4,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Tortilla de harina",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Papa cocida",
+          "cantidad_semanal": 3,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Plátano",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Fresas",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        }
+      ],
+      "🥬 Verduras y Vegetales": [
+        {
+          "alimento": "Espinacas",
+          "cantidad_semanal": 7,
+          "es_favorito": true
+        },
+        {
+          "alimento": "Apio",
+          "cantidad_semanal": 2,
+          "es_favorito": false
+        },
+        {
+          "alimento": "Lechuga",
+          "cantidad_semanal": 1,
+          "es_favorito": false
+        }
+      ]
+    },
+    "tips_nutricionales": [
+      {
+        "categoria": "orden_optimo",
+        "titulo": "Orden Óptimo de Consumo",
+        "descripcion": "Come en este orden para reducir picos de glucosa",
+        "instrucciones": [
+          "1️⃣ Verduras PRIMERO (fibra y nutrientes)",
+          "2️⃣ Proteínas SEGUNDO (saciedad y control)",
+          "3️⃣ Grasas TERCERO (absorción lenta)",
+          "4️⃣ Carbohidratos ÚLTIMO (menor impacto glucémico)"
+        ]
+      },
+      {
+        "categoria": "alimentos_favoritos",
+        "titulo": "Tus Alimentos Favoritos",
+        "descripcion": "Alimentos marcados con ⭐ en tu meal plan",
+        "instrucciones": [
+          "• Arroz integral cocido - Incluido regularmente en tu plan",
+          "• Pollo pechuga sin piel - Incluido regularmente en tu plan",
+          "• Espinacas - Incluido regularmente en tu plan",
+          "• Manzana - Incluido regularmente en tu plan"
+        ]
+      },
+      {
+        "categoria": "control_diabetico",
+        "titulo": "Control Diabetes Tipo2",
+        "descripcion": "Recomendaciones específicas para tu tipo de diabetes",
+        "instrucciones": [
+          "🩺 Consulta con tu médico sobre medicación",
+          "📊 Monitorea glucosa antes y después de comidas",
+          "⏰ Respeta horarios de comida establecidos",
+          "🚶‍♀️ Camina 10-15 minutos después de comer",
+          "🎯 Mantén IG ≤ 55"
+        ]
+      },
+      {
+        "categoria": "beneficios_cientificos",
+        "titulo": "Evidencia Científica",
+        "descripcion": "Beneficios comprobados del orden alimentario",
+        "instrucciones": [
+          "📈 Reducción de picos glucémicos: 25-37%",
+          "🍽️ Mayor saciedad y control de peso",
+          "💊 Mejor efectividad de medicación diabética",
+          "🧬 Optimización de respuesta insulínica"
+        ]
+      }
+    ]
+  },
+  "alimentos_utilizados": {
+    "desayunos": [
+      "Lentejas cocidas",
+      "Huevos enteros",
+      "Pan integral",
+      "Pan blanco",
+      "Avena cocida",
+      "Arroz blanco cocido",
+      "Pasta blanca cocida",
+      "Tortilla de maíz",
+      "Quinoa cocida",
+      "Tortilla de harina",
+      "Arroz integral cocido",
+      "Papa cocida",
+      "Camote cocido",
+      "Garbanzos cocidos",
+      "Tofu",
+      "Plátano",
+      "Frijoles negros cocidos",
+      "Brócoli",
+      "Atún",
+      "Apio"
+    ],
+    "almuerzos": [
+      "Lentejas cocidas",
+      "Huevos enteros",
+      "Arroz blanco cocido",
+      "Arroz integral cocido",
+      "Avena cocida",
+      "Pan integral",
+      "Tortilla de maíz",
+      "Garbanzos cocidos",
+      "Quinoa cocida",
+      "Camote cocido",
+      "Pan blanco",
+      "Papa cocida",
+      "Tortilla de harina",
+      "Pasta blanca cocida",
+      "Frijoles negros cocidos",
+      "Apio",
+      "Brócoli",
+      "Espinacas",
+      "Zanahoria cruda",
+      "Tomate",
+      "Plátano",
+      "Cebolla",
+      "Lechuga",
+      "Fresas",
+      "Pimiento"
+    ],
+    "cenas": [
+      "Lentejas cocidas",
+      "Huevos enteros",
+      "Pan integral",
+      "Pasta blanca cocida",
+      "Garbanzos cocidos",
+      "Cerdo lomo",
+      "Apio",
+      "Avena cocida",
+      "Plátano",
+      "Lechuga",
+      "Fresas",
+      "Camote cocido",
+      "Espinacas",
+      "Arroz integral cocido",
+      "Atún",
+      "Tortilla de harina",
+      "Arroz blanco cocido",
+      "Papa cocida",
+      "Frijoles negros cocidos",
+      "Tortilla de maíz"
+    ],
+    "snacks": [
+      "Leche descremada",
+      "Fresas",
+      "Yogurt natural",
+      "Arándanos",
+      "Lentejas cocidas",
+      "Queso fresco",
+      "Apio",
+      "Uvas",
+      "Leche entera",
+      "Plátano",
+      "Yogurt griego",
+      "Naranja",
+      "Manzana",
+      "Pan integral",
+      "Tomate"
+    ]
+  },
+  "meal_plans_anteriores_count": 0
+}

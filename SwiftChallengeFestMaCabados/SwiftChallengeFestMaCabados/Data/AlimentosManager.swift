@@ -52,6 +52,10 @@ class AlimentosManager: ObservableObject {
     func alimentosPorCategoria(_ categoria: CategoriaAlimento) -> [Alimento] {
         return alimentos.filter { $0.categoria == categoria }
     }
+    
+    func getAlimentoImageURL(for nombre: String) -> String? {
+        return alimentos.first { $0.nombre.lowercased() == nombre.lowercased() }?.imagen
+    }
 }
 
 struct AlimentosResponse: Codable {
