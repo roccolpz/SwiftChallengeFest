@@ -11,6 +11,7 @@ struct DashboardView: View {
     @StateObject private var perfilManager = PerfilUsuarioManager.shared
     @State private var showingPredictor = false
     @State private var showingPerfil = false
+    @State private var showingNoticias = false
     
     var body: some View {
         NavigationView {
@@ -53,6 +54,9 @@ struct DashboardView: View {
         .sheet(isPresented: $showingPerfil) {
             // TODO: Vista de perfil
             Text("Perfil - Próximamente")
+        }
+        .sheet(isPresented: $showingNoticias) {
+            DiabetesNewsView()
         }
         .onAppear {
             verificarConfiguracion()
@@ -153,8 +157,8 @@ struct DashboardView: View {
                 .font(.headline)
                 .padding(.horizontal, 4)
             
+            // Primera fila
             HStack(spacing: 12) {
-                // Simular medición
                 AccionRapidaCard(
                     titulo: "Simular",
                     subtitulo: "Medición",
@@ -164,18 +168,26 @@ struct DashboardView: View {
                     glucosaManager.simularMedicionAutomatica()
                 }
                 
-                // Ver estadísticas
                 AccionRapidaCard(
                     titulo: "Estadísticas",
                     subtitulo: "Del día",
                     icono: "chart.bar.fill",
                     color: ColorHelper.Estados.exito
                 ) {
-                    // TODO: Mostrar estadísticas
                     print("📊 Estadísticas del día")
                 }
+            }
+            
+            HStack(spacing: 12) {
+                AccionRapidaCard(
+                    titulo: "Noticias",
+                    subtitulo: "Diabetes",
+                    icono: "newspaper.fill",
+                    color: .orange
+                ) {
+                    showingNoticias = true
+                }
                 
-                // Configuración
                 AccionRapidaCard(
                     titulo: "Configurar",
                     subtitulo: "Perfil",
