@@ -103,9 +103,9 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 
 ### Dashboard
 <div align="center">
-  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="180"/>
-  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="180"/>
-  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="180"/>
+  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="150"/>
+  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="150"/>
+  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="150"/>
 </div>
 
 ### Predictor de Glucosa
@@ -131,8 +131,9 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 
 ### Noticias y Perfil
 <div align="center">
-  <img src="Images/diabetes_news.png" alt="Noticias sobre Diabetes" width="250"/>
-  <img src="Images/user_profile.png" alt="Perfil de Usuario" width="250"/>
+  <img src="Images/News.PNG" alt="News" width="150"/>
+  <img src="Images/Profile1.PNG" alt="Profile1" width="150"/>
+  <img src="Images/Profile2.PNG" alt="Profile2" width="150"/>
 </div>
 
 ---
