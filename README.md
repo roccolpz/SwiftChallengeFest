@@ -98,13 +98,12 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
   <img src="Images/OB5.PNG" alt="Onboarding" width="120"/>
   <img src="Images/OB6.PNG" alt="Onboarding" width="120"/>
   <img src="Images/OB7.PNG" alt="Onboarding" width="120"/>
-
 </div>
 
 ### Dashboard
 <div align="center">
   <img src="Images/Dashboard1.PNG" alt="QuickActions" width="150"/>
-  <img src="Images/Dashboard4.PNG" alt="Update Glucose" width="150"/
+  <img src="Images/Dashboard4.PNG" alt="Update Glucose" width="150"/>
   <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="150"/>
   <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="150"/>
 </div>
@@ -115,31 +114,22 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
   <img src="Images/GP2.PNG" alt="Glucose Predictor" width="150"/>
   <img src="Images/GP3.PNG" alt="Glucose Predictor" width="150"/>
   <img src="Images/GP4.PNG" alt="Glucose Predictor" width="150"/>
-  <img src="Images/GP5.PNG" alt="Glucose Predictor" width="150"/>
-
-
-  
+  <img src="Images/GP5.PNG" alt="Glucose Predictor" width="150"/>  
 </div>
 
-### Orden de Comida y Comparación
+### Recent Meals & Meal Planner
 <div align="center">
-  <img src="Images/meal_order.png" alt="Orden de Comida" width="250"/>
-  <img src="Images/order_comparison.png" alt="Comparación de Órdenes" width="250"/>
-  <img src="Images/scientific_studies.png" alt="Estudios Científicos" width="250"/>
-</div>
-
-### Meal Planner
-<div align="center">
-  <img src="Images/meal_planner.png" alt="Planificador de Comidas" width="250"/>
-  <img src="Images/weekly_plan.png" alt="Plan Semanal" width="250"/>
-  <img src="Images/shopping_list.png" alt="Lista de Compras" width="250"/>
+  <img src="Images/RM.PNG" alt="Recent Meals" width="120"/>
+  <img src="Images/MP1.PNG" alt="Meal Planner" width="120"/>
+  <img src="Images/MP2.png" alt="Meal Planner" width="120"/>
+  <img src="Images/MP3.png" alt="Meal Planner" width="120"/>
 </div>
 
 ### Noticias y Perfil
 <div align="center">
-  <img src="Images/News.PNG" alt="News" width="150"/>
-  <img src="Images/Profile1.PNG" alt="Profile1" width="150"/>
-  <img src="Images/Profile2.PNG" alt="Profile2" width="150"/>
+  <img src="Images/News.PNG" alt="News" width="120"/>
+  <img src="Images/Profile1.PNG" alt="Profile1" width="120"/>
+  <img src="Images/Profile2.PNG" alt="Profile2" width="120"/>
 </div>
 
 ---
