@@ -102,19 +102,19 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 
 ### Dashboard
 <div align="center">
-  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="150"/>
-  <img src="Images/Dashboard4.PNG" alt="Update Glucose" width="150"/>
-  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="150"/>
-  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="150"/>
+  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="120"/>
+  <img src="Images/Dashboard4.PNG" alt="Update Glucose" width="120"/>
+  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="120"/>
+  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="120"/>
 </div>
 
 ### Glucose Predictor
 <div align="center">
-  <img src="Images/GP1.PNG" alt="Glucose Predictor" width="150"/>
-  <img src="Images/GP2.PNG" alt="Glucose Predictor" width="150"/>
-  <img src="Images/GP3.PNG" alt="Glucose Predictor" width="150"/>
-  <img src="Images/GP4.PNG" alt="Glucose Predictor" width="150"/>
-  <img src="Images/GP5.PNG" alt="Glucose Predictor" width="150"/>  
+  <img src="Images/GP1.PNG" alt="Glucose Predictor" width="120"/>
+  <img src="Images/GP2.PNG" alt="Glucose Predictor" width="120"/>
+  <img src="Images/GP3.PNG" alt="Glucose Predictor" width="120"/>
+  <img src="Images/GP4.PNG" alt="Glucose Predictor" width="120"/>
+  <img src="Images/GP5.PNG" alt="Glucose Predictor" width="120"/>  
 </div>
 
 ### Recent Meals & Meal Planner
