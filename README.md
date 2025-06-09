@@ -121,8 +121,8 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 <div align="center">
   <img src="Images/RM.PNG" alt="Recent Meals" width="120"/>
   <img src="Images/MP1.PNG" alt="Meal Planner" width="120"/>
-  <img src="Images/MP2.png" alt="Meal Planner" width="120"/>
-  <img src="Images/MP3.png" alt="Meal Planner" width="120"/>
+  <img src="Images/MP2.PNG" alt="Meal Planner" width="120"/>
+  <img src="Images/MP3.PNG" alt="Meal Planner" width="120"/>
 </div>
 
 ### Noticias y Perfil
