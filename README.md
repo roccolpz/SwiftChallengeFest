@@ -1,8 +1,4 @@
-
-  <img src="Images/banner.png" alt="banner" width="100%">
-
-# GlucoPredict iOS App
-
+<img src="Images/banner.png" alt="banner" width="100%">
 <a id="readme-top"></a>
 <h1 align="center">GlucoPredict - Predictor de Glucosa Inteligente</h1>
 <div align="center">
@@ -32,13 +28,12 @@
         <li><a href="#features">Características Principales</a></li>
       </ul>
     </li>
-    <li><a href="#features-detail">Características Detalladas</a></li>
     <li><a href="#screenshots">Capturas de Pantalla</a></li>
     <li><a href="#demo-video">Video Demostración</a></li>
-    <li><a href="#usage">Uso de la Aplicación</a></li>
-    <li><a href="#algorithms">Algoritmos y Ciencia</a></li>
+    <li><a href="#features-detail">Características Detalladas</a></li>
     <li><a href="#authors">Autores</a></li>
-    <li><a href="#acknowledgments">Agradecimientos</a></li>
+    <li><a href="#features-detail">Validación Clinica</a></li>
+    <li><a href="#features-detail">Disclaimers</a></li>
   </ol>
 </details>
 
@@ -101,11 +96,11 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
   <img src="Images/diabetes_config.png" alt="Configuración Diabetes" width="250"/>
 </div>
 
-### Dashboard Principal
+### Dashboard / Home Page
 <div align="center">
-  <img src="Images/dashboard.png" alt="Dashboard" width="250"/>
-  <img src="Images/glucose_card.png" alt="Card de Glucosa" width="250"/>
-  <img src="Images/meal_history.png" alt="Historial de Comidas" width="250"/>
+  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="250"/>
+  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="250"/>
+  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="250"/>
 </div>
 
 ### Predictor de Glucosa
