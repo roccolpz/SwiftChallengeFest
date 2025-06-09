@@ -28,7 +28,7 @@
         <li><a href="#features">Características Principales</a></li>
       </ul>
     </li>
-    <li><a href="#screenshots">Capturas de Pantalla</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#demo-video">Video Demostración</a></li>
     <li><a href="#features-detail">Características Detalladas</a></li>
     <li><a href="#authors">Autores</a></li>
@@ -87,20 +87,25 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 - Recomendaciones de dosis seguras
 
 ---
-### Capturas de Pantalla
+### Screenshots 
 
-### Onboarding y Configuración Inicial
+### Onboarding
 <div align="center">
-  <img src="Images/onboarding.png" alt="Onboarding" width="250"/>
-  <img src="Images/profile_setup.png" alt="Configuración de Perfil" width="250"/>
-  <img src="Images/diabetes_config.png" alt="Configuración Diabetes" width="250"/>
+  <img src="Images/OB1.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB2.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB3.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB4.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB5.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB6.PNG" alt="Onboarding" width="120"/>
+  <img src="Images/OB7.PNG" alt="Onboarding" width="120"/>
+
 </div>
 
 ### Dashboard / Home Page
 <div align="center">
-  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="250"/>
-  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="250"/>
-  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="250"/>
+  <img src="Images/Dashboard1.PNG" alt="QuickActions" width="180"/>
+  <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="180"/>
+  <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="180"/>
 </div>
 
 ### Predictor de Glucosa
