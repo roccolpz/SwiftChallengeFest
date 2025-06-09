@@ -104,15 +104,21 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 ### Dashboard
 <div align="center">
   <img src="Images/Dashboard1.PNG" alt="QuickActions" width="150"/>
+  <img src="Images/Dashboard4.PNG" alt="Update Glucose" width="150"/
   <img src="Images/Dashboard2.PNG" alt="GlucoseTracker and Predict Glucose" width="150"/>
   <img src="Images/Dashboard3.PNG" alt="Recent Meals and day summary" width="150"/>
 </div>
 
-### Predictor de Glucosa
+### Glucose Predictor
 <div align="center">
-  <img src="Images/food_selector.png" alt="Selector de Alimentos" width="250"/>
-  <img src="Images/selected_foods.png" alt="Alimentos Seleccionados" width="250"/>
-  <img src="Images/prediction_graph.png" alt="Gráfica de Predicción" width="250"/>
+  <img src="Images/GP1.PNG" alt="Glucose Predictor" width="150"/>
+  <img src="Images/GP2.PNG" alt="Glucose Predictor" width="150"/>
+  <img src="Images/GP3.PNG" alt="Glucose Predictor" width="150"/>
+  <img src="Images/GP4.PNG" alt="Glucose Predictor" width="150"/>
+  <img src="Images/GP5.PNG" alt="Glucose Predictor" width="150"/>
+
+
+  
 </div>
 
 ### Orden de Comida y Comparación
