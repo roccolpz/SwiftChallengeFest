@@ -1,57 +1,57 @@
 <img src="Images/banner.png" alt="banner" width="100%">
 <a id="readme-top"></a>
-<h1 align="center">GlucoPredict - Predictor de Glucosa Inteligente</h1>
+<h1 align="center"> GlucoPredict - Intelligent Glucose Predictor </h1>
 <div align="center">
   <a href="https://github.com/tu-usuario/GlucoPredict">
     <img src="Images/logo.png" alt="Logo" width="120" height="120">
   </a>
 
   <p align="center">
-    Una aplicación iOS nativa desarrollada en SwiftUI que ayuda a personas con diabetes a predecir y controlar sus niveles de glucosa mediante inteligencia artificial y algoritmos basados en estudios clínicos.
+    A native iOS application developed in SwiftUI that helps people with diabetes predict and control their glucose levels using artificial intelligence and algorithms based on clinical studies.
     <br />
-    <a href="#demo-video">Ver Demo</a>
+    <a href="#demo-video">View Demo</a>
     ·
-    <a href="#screenshots">Capturas del Proyecto</a>
+    <a href="#screenshots">Project Screenshots</a>
     ·
-    <a href="#features">Características</a>
+    <a href="#features">Features</a>
   </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Tabla de Contenidos</summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Acerca del Proyecto</a>
+      <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Tecnologías Utilizadas</a></li>
-        <li><a href="#features">Características Principales</a></li>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#key-features">Key Features</a></li>
       </ul>
     </li>
     <li><a href="#screenshots">Screenshots</a></li>
-    <li><a href="#demo-video">Video Demostración</a></li>
-    <li><a href="#features-detail">Características Detalladas</a></li>
-    <li><a href="#authors">Autores</a></li>
-    <li><a href="#features-detail">Validación Clinica</a></li>
-    <li><a href="#features-detail">Disclaimers</a></li>
+    <li><a href="#demo-video">Demo Video</a></li>
+    <li><a href="#detailed-features">Detailed Features</a></li>
+    <li><a href="#authors">Authors</a></li>
+    <li><a href="#clinical-validation">Clinical Validation</a></li>
+    <li><a href="#disclaimers">Disclaimers</a></li>
   </ol>
 </details>
 
 ---
 
 <!-- ABOUT THE PROJECT -->
-## Acerca del Proyecto
+## About The Project
 
-GlucoPredict es una aplicación iOS innovadora diseñada específicamente para personas con diabetes que buscan un mejor control de sus niveles de glucosa. Utilizando algoritmos basados en estudios clínicos y machine learning, la app predice cómo diferentes alimentos y órdenes de comida afectarán los niveles de glucosa postprandial.
+GlucoPredict is an innovative iOS application designed specifically for people with diabetes seeking better control of their glucose levels. Using algorithms based on clinical studies and machine learning, the app predicts how different foods and meal orders will affect postprandial glucose levels.
 
-### Problema que Resuelve
-- **37% de reducción** en picos de glucosa mediante el orden optimizado de alimentos
-- **Predicciones precisas** de glucosa antes de comer
-- **Planificación inteligente** de comidas personalizadas
-- **Cálculo automático** de dosis de insulina
+### Problem it solves
+- **37% reduction**  in glucose spikes through optimized food ordering
+- **Accurate predictions** of glucose before eating
+- **Inteligent meal planning** with personalized recommendations
+- **Automatic calculation** of insulin doses
 
-### Tecnologías Utilizadas
-
+<a id="built-with"></a>
+### Build witth
 - [![Swift](https://img.shields.io/badge/Swift-F54A2A?logo=swift&logoColor=white)](#)
 - [![SwiftUI](https://img.shields.io/badge/SwiftUI-42C8F4?logo=swift&logoColor=white)](#)
 - [![CoreML](https://img.shields.io/badge/CoreML-0A84FF?logo=swift&logoColor=white)](#)
@@ -59,34 +59,36 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 - [![UserDefaults](https://img.shields.io/badge/UserDefaults-34C759?logo=swift&logoColor=white)](#)
 - [![JSON](https://img.shields.io/badge/JSON-000000?logo=json&logoColor=white)](#)
 
-### Características Principales
+<a id="key-features"></a>
+### Key Features
 
-🩸 **Predictor de Glucosa**
-- Predicciones basadas en algoritmos clínicos
-- Análisis de 1,000+ alimentos
-- Factores personalizados (edad, IMC, tipo de diabetes)
+🩸 **Glucose Predictor**
+- Predictions based on clinical algorithms
+- Analysis of 1,000+ foods
+- Personalized factors (age, BMI, diabetes type)
 
-🍽️ **Orden Optimizado de Comida**
-- Verduras primero: hasta 37% menos pico de glucosa
-- Recomendaciones basadas en estudios científicos
-- Comparación visual de diferentes órdenes
+🍽️ **Optimized Meal Order**
+- Vegetables first: up to 37% less glucose spike
+- Recommendations based on scientific studies
+- Visual comparison of different orders
 
-📊 **Seguimiento Inteligente**
-- Gráficas interactivas de predicción
-- Historial de comidas y efectividad
-- Estadísticas personalizadas
+📊 **Intelligent Tracking**
+- Interactive prediction graphs
+- Meal history and effectiveness
+- Personalized statistics
 
-🤖 **Meal Planner con IA**
-- Planes semanales personalizados
-- Lista de compras automática
-- Tips nutricionales específicos
+🤖 **AI-Powered Meal Planner**
+- Personalized weekly plans
+- Automatic shopping list
+- Specific nutritional tips
 
-💉 **Calculadora de Insulina**
-- Ratios I:C personalizados
-- Factor de sensibilidad automático
-- Recomendaciones de dosis seguras
+💉 **Insulin Calculator**
+- Personalized I:C ratios
+- Automatic sensitivity factor
+- Safe dose recommendations
 
 ---
+<a id="screenshots"></a>
 ### Screenshots 
 
 ### Onboarding
@@ -133,44 +135,42 @@ GlucoPredict es una aplicación iOS innovadora diseñada específicamente para p
 </div>
 
 ---
-
+<a id="demo-video"></a>
 ## Demo Video
 
-¡Mira la aplicación en acción!  
+Watch the application in action!
 [![GlucoPredict Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
 
-Haz clic en la imagen o [aquí](https://youtu.be/YOUR_VIDEO_ID) para ver la demostración.
+Click on the image on [aquí](https://youtu.be/YOUR_VIDEO_ID) to view the demonstration.
 
 ---
+<a id="detailed-features"></a>
+## Detailed Features
 
-## Características Detalladas
+### 🩸 Advanced Glucose Predictor
+The heart of the application uses algorithms based on clinical studies to predict glucose levels:
 
-### 🩸 Predictor de Glucosa Avanzado
+- **Meal Order Algorithm**: Implementa findings de estudios que muestran reducciones de 17-37% en picos de glucosa
+- **Circadian Factors**: Adjusts predictions based on time of day (dawn phenomenon)
+- **User Personalization**: Considers age, BMI, diabetes type, and medications
+- **Nutritional Database**: Over 1,000 foods with glycemic index and glycemic load
 
-El corazón de la aplicación utiliza algoritmos basados en estudios clínicos para predecir niveles de glucosa:
+### 📊 Interactive Visualization
 
-- **Algoritmo de Orden de Comida**: Implementa findings de estudios que muestran reducciones de 17-37% en picos de glucosa
-- **Factores Circadianos**: Ajusta predicciones según la hora del día (fenómeno del amanecer)
-- **Personalización por Usuario**: Considera edad, IMC, tipo de diabetes y medicamentos
-- **Base de Datos Nutricional**: Más de 1,000 alimentos con índice glicémico y carga glicémica
+- **Prediction Graphs**: Real-time predicted glucose curves
+- **Order Comparison**: Side-by-side visualization of different sequences
+- **Ingelligent History**: Tracking effectiveness of previous predictions
 
-### 📊 Visualización Interactiva
+### 🤖 Personalized Meal Planner
 
-- **Gráficas de Predicción**: Curvas de glucosa predichas en tiempo real
-- **Comparación de Órdenes**: Visualización lado a lado de diferentes secuencias
-- **Historial Inteligente**: Tracking de efectividad de predicciones anteriores
+The meal planner uses structured JSON to generate:
 
-### 🤖 Meal Planner Personalizado
+- **Weekly Planss**: Breakfast, snacks, lunch, afternoon snack, and dinnerc
+- **Nutritional Balance**: Optimized for glycemic control
+- **Shopping List**: Automatically generated by frequency of use
+- **Personalized Tips**: Based on user profile
 
-El planificador de comidas utiliza JSON estructurado para generar:
-
-- **Planes Semanales**: Desayuno, snacks, comida, merienda y cena
-- **Balance Nutricional**: Optimizado para control glucémico
-- **Lista de Compras**: Generada automáticamente por frecuencia de uso
-- **Tips Personalizados**: Basados en el perfil del usuario
-
-
-
+<a id="authors"></a>
 ## Authors 
 ### MacAbados team 🦧
 
@@ -217,34 +217,33 @@ El planificador de comidas utiliza JSON estructurado para generar:
   </tr>
 </table>
 
+<a id="clinical-validation"></a>
 ## Validación Clínica
 
-### Estudios Base
+### Base Studies
 
-La aplicación se fundamenta en investigación peer-reviewed:
+The application is based on peer-reviewed research:
 
 1. **Shukla et al. (2015)** - Diabetes Care
-  - 37% reducción en pico glucémico con verduras primero
-  - Estudio con 16 participantes con diabetes tipo 2
+  - 37% reduction in glucose peak with vegetables first
+  - Study with 16 participants with type 2 diabetes
 
 2. **Shukla et al. (2016)** - Diabetes Care
-  - 20% reducción en insulina postprandial
-  - Protocolo: Verduras/proteínas → esperar 15 min → carbohidratos
+  - 20% reduction in postprandial insulin
+  - Protocol: Vegetables/proteins → wait 15 min → carbohydrates
 
 3. **Imai et al. (2013)** - European Journal of Clinical Nutrition
-  - Validación en población japonesa
-  - Confirmación de efectos en diferentes etnias
+  - Validation in Japanese population
+  - Confirmation of effects across different ethnicities
 
-
+<a id="disclaimers"></a>
 ### Limitaciones y Disclaimers
 
 ⚠️ **Importante**:
-- Esta app es una **herramienta educativa**, no un dispositivo médico
-- Las predicciones son **estimaciones** basadas en promedios poblacionales
-- **Siempre consulta** con tu equipo médico antes de cambios en tratamiento
-- **No reemplaza** la medición real de glucosa
-
-
+- This app is an **educational tool**, not a medical device
+- Predictions are **estimates** based on population averages
+- **Always consult** with your medical team before treatment changes
+- **Does not replace** actual glucose measurement
 ---
 
 [🔼 Back to top](#readme-top)
